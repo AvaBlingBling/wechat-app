@@ -1,0 +1,37 @@
+<!--pages/product/confirm.wxml确认订单页-->
+<view class="container">
+  <view class="add-address border-top-bottom" bindtap="addAddress">
+    <view class="add-circle">+</view>
+    <text>新建收货地址</text>
+  </view>
+  <view class="order">
+    <image src="{{orderPage.img}}" mode="widthFix" class="s-img col-3"/>
+    <view class="title .col-9">
+      <view class="font16">
+        <text>{{orderPage.text}}</text>
+        <text class="right">￥{{orderPage.price}}</text>
+      </view>
+      <view class="font12">
+        <text>{{orderPage.size}},</text>
+        <text>{{orderPage.color}}</text>
+        <text class="right">×{{orderPage.count}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="font14 bottom-border order-item">
+    <text>运费</text>
+    <text class="right" bindtap="freight"><text class="font12">￥0</text>></text>
+  </view>
+  <view class="font14 bottom-border order-item">
+    <text>优惠券</text>
+    <text class="right" bindtap="coupon"><text class="font12" style="color:#ccc">未使用</text>></text>
+  </view>
+  <view class="font14 bottom-border order-item message">
+    <text>买家留言：</text>
+    <input class="right" placeholder="点击给商家留言"/>
+  </view>
+  <view class="controls">
+    <div class="summary">合计：￥233.00</div>
+    <div class="bgRed checkpay"><navigator url="./pay" open-type="switchTab">立即支付</navigator></div>
+  </view>
+</view>

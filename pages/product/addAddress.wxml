@@ -1,0 +1,52 @@
+<!--pages/product/addAddress.wxml新建地址表单页-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section bottom-border font14">
+    <view class="section__title col-3">收货人</view>
+    <input class='col-9' name="input" placeholder="姓名" />
+  </view>
+  <view class="section bottom-border font14">
+    <view class="section__title  col-3">联系电话</view>
+    <input  class='col-9' name="input" placeholder="手机或电话号码" />
+  </view>
+  <view class="section bottom-border font14">
+    <view class="section__title  col-3">收货地区</view>
+    <view class="col-9 select" bindtap="selectProvince">
+      <view wx:if="{{province===''}}" class="grey">选择收货地区</view>
+      <view wx:else>
+        <text>{{province}}</text>
+        <text>{{city}}</text>
+        <text>{{zone}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="section bottom-border font14">
+    <view class="section__title  col-3">详细地址</view>
+    <input  class='col-9' name="input" placeholder="街道地址" />
+  </view>
+  <view class="section bottom-border font14">
+    <view class="section__title  col-3">邮政编码</view>
+    <input  class='col-9' name="input" placeholder="邮政编码（选填）" />
+  </view>
+  <!-- <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view> -->
+</form>
+<view class="{{'font16 area ' + (showProvince?'':'hidden')}}">
+  <view class="cancel_confirm">
+    <text bindtap="confirm">取消</text>
+    <text class="right confirm" bindtap="confirm">确定</text>
+  </view>
+  <picker-view class="area-picker" indicator-style="height:40px" value="{{[provinceIndex,cityIndex,zoneIndex]}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{area}}" wx:key="{{index}}">{{item.name}}</view>
+    </picker-view-column>
+     <picker-view-column>
+      <view wx:for="{{area[provinceIndex].sub}}" wx:key="{{index}}">{{item.name}}</view>
+    </picker-view-column>
+     <picker-view-column>
+      <view wx:for="{{area[provinceIndex].sub[cityIndex].sub}}" wx:key="{{index}}">{{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+  

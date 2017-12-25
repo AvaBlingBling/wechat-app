@@ -1,0 +1,55 @@
+<import src="../template.wxml"/>
+<!--index.wxml-->
+<view class="container">
+  <view class="section section_slider">
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">———— 每日上新 ————</view>
+    <view class="section__ctn">
+      <view class="section__ctn_1">
+        <image class="section__ctn_img" mode="aspectFit" src="{{newArrival.pic1}}"></image>
+        <image class="section__ctn_img" mode="aspectFit" src="{{newArrival.pic2}}"></image>
+        <image class="section__ctn_img_horizen" mode="aspectFill" src="{{newArrival.pic3}}"></image>
+      </view>
+      <view class="section__ctn_2">
+        <image class="section__ctn_img_vertical" mode="aspectFill" src="{{newArrival.pic4}}"></image>
+      </view>
+    </view>
+  </view>  
+  <view class="tab">
+    <view class="tab_top">
+      <ul bindtap="tabFun">
+        <li class="{{curIndex=='0'? 'active' : ''}}" data-id="0">护肤</li>
+        <li class="{{curIndex=='1'? 'active' : ''}}" data-id="1">彩妆</li>
+        <li class="{{curIndex=='2'? 'active' : ''}}"  data-id="2">零食</li>
+        <li class="{{curIndex=='3'? 'active' : ''}}"  data-id="3">家居</li>
+      </ul>
+    </view>
+    <view class="tab_content">
+      <view style="display:{{curIndex=='0'?'block':'none'}}">
+        <view class="products" wx:for="{{products}}" wx:key="index">
+          <template is="product" data="{{...item}}"/>
+        </view>
+      </view>
+      <view style="display:{{curIndex=='1'?'block':'none'}}">2</view>
+      <view style="display:{{curIndex=='2'?'block':'none'}}">3</view>
+      <view style="display:{{curIndex=='3'?'block':'none'}}">4</view>
+    </view>
+  </view>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <!-- <view class="picker">
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view> -->
+  </picker>
+   <!-- <contact-button size="30" session-from="weapp">联系客服</contact-button>  -->
+  <button bindcontact="contacttap" class="contact-button" open-type="contact" session-from="weapp">
+    <image class="cs_image" mode="aspectFit" src="../images/tab3.png"></image>    
+  </button>
+</view>

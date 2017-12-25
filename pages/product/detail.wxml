@@ -1,0 +1,63 @@
+<!--商品详情页  -->
+<view class="container">
+  <view class="{{'section section_slider ' + (showOrderPage?'noscroll':'')}}">
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="prodetail">
+      <view><text class="title">{{pcontent.title}}</text></view>
+      <view><text class="subtitle">{{pcontent.subtitle}}</text></view>
+      <view>
+        <text class="mark">￥ </text>
+        <text class="price">{{pcontent.price}}</text>
+        <text class="initial">{{pcontent.initial}}</text>
+      </view>
+      <view class="biaoge">
+        <text class="carriage">运费：{{pcontent.carriage>0?pcontent.carriage:'免运费'}}</text>
+        <text class="carriage">剩余：{{pcontent.remain}}</text>
+        <text class="carriage">销量：{{pcontent.sales}}</text>
+      </view>
+      <view class="detail">
+        <view class="detail-title">商品详情</view>
+        <view class="detail-content"><rich-text nodes="{{pcontent.discription}}" bindtap="tap"/></view>
+      </view>
+    </view>
+    <view class="controls">
+      <div class="firstpage"><navigator url="../home/home" open-type="switchTab">首页</navigator></div>
+      <div class="orders">订单</div>
+      <div class="joinorders" bindtap="joinOrders">加入订单</div>
+      <div class="bugnow">立即购买</div>
+    </view>
+  </view> 
+  <view bindtap="clear" class="{{showOrderPage? 'mask':'hidden'}}"></view>
+  <view class="{{showOrderPage? 'orderPage':'hidden'}}">
+    <icon type="clear" size="20" class="page-clear" bindtap="clear"/>
+    <view class="orderPage-container">
+      <image src="{{orderPage.img}}" mode="widthFix" class="s-img"/>
+      <view class="title bigtext bottom-border">
+        <view><text>{{orderPage.text}}</text></view>
+        <view><text class="red">￥{{orderPage.price}}</text></view>
+      </view>
+      <view class="size">
+        <text class="bigtext">规格：</text>
+        <button wx:for="{{orderPage.size}}" wx:key="{{index}}" style="margin:0 10rpx" bindtap="selectSize" data-index="{{index}}" class="{{customOrder.size===index?'bgRed':''}}">{{item}}</button>
+      </view>
+      <view class="size bottom-border">
+        <text class="bigtext">颜色：</text>
+        <button wx:for="{{orderPage.color}}" wx:key="{{index}}" style="margin:0 10rpx" bindtap="selectColor" data-index="{{index}}" class="{{customOrder.color===index?'bgRed':''}}">{{item}}</button>
+      </view>
+      <view class="remain">
+        <text class="bigtext">购买数量：</text>
+        <text>剩余{{orderPage.remain}}件</text>
+        <button style="margin-left:200rpx" bindtap="changeCount" id="sub" disabled="{{customOrder.count>1?false:true}}">-</button>
+        <button>{{customOrder.count}}</button>
+        <button bindtap="changeCount" id="add" disabled="{{customOrder.count<orderPage.remain?false:true}}">+</button>
+      </view>
+    </view>
+    <button bindtap="confirm" class="bgRed confirm">确定</button>
+  </view>
+</view>

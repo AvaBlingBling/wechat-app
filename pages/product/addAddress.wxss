@@ -1,0 +1,44 @@
+/* pages/product/addAddress.wxss */
+form{
+  padding: 20rpx;
+  display: block;
+}
+.section{
+  display:flex;
+  align-items: center;
+  padding: 15rpx;
+}
+.section .select{
+  display: flex;
+  justify-content: flex-start;
+}
+.grey{
+  color: #8e908c;
+}
+.section .select text{
+   width: 33%;
+   display:inline-block;
+}
+.area{
+  position: fixed;
+  bottom: 0;
+}
+.area-picker{
+  width: 50%;
+  height: 600rpx;
+  margin: 0 auto;
+}
+.area-picker view{
+  text-align: center;
+  line-height: 40px
+}
+.indicator{
+  font-weight: 700;
+  color: green;
+}
+.cancel_confirm{
+  padding:0 50rpx;
+}
+.cancel_confirm .confirm{
+  color: green;
+}

@@ -1,0 +1,138 @@
+/* pages/product/detail.wxss */
+.section_slider .slide-image,
+.section_slider swiper{
+  height: 300px;
+}
+.prodetail{
+  padding: 10rpx;
+}
+.prodetail .title{
+  font-weight: 700;
+}
+.prodetail .subtitle,
+.biaoge{
+  font-size: 0.6rem;
+}
+.prodetail .mark,
+.prodetail .price,
+.prodetail .initial{
+  font-size:0.8rem;
+}
+.prodetail .price{
+  font-weight:600;
+  color: red;
+}
+.prodetail .initial{
+  margin-left: 20rpx;
+  color: #9e9e9e;
+  text-decoration:line-through;
+}
+.biaoge{
+  border-top:1px solid #9e9e9e;
+  border-bottom:1px solid #9e9e9e;
+  color: #9e9e9e;
+  display:flex;
+  justify-content: left;
+  padding: 10rpx 0;
+}
+.biaoge .carriage{
+   width: 33%; 
+   /* text-align: center;  */
+   padding-left: 5%;
+}
+.detail{
+  border: 1px solid #9e9e9e;
+  margin: 20rpx 0;
+}
+.detail .detail-title{
+  text-align: center;
+  border-bottom:1px solid #9e9e9e;
+  font-size: 0.8rem;
+  line-height: 50rpx;
+}
+.detail .detail-content{
+  padding: 20rpx;
+}
+.controls {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  background-color: #fff;
+}
+.controls div{
+  border: 1px solid #9e9e9e;
+  box-sizing: border-box;
+  height: 90rpx;   
+  line-height: 90rpx;  
+  text-align: center;
+  font-size: 0.8rem;
+  color: #000;
+}
+.controls .firstpage {
+  width: 20%;
+}
+.controls .orders {
+  width: 20%;
+}
+.controls .joinorders {
+  width: 30%;
+}
+.controls .bugnow {
+  width: 30%;
+  background-color: red;
+  color: #fff;
+}
+.orderPage{
+  position: fixed;
+  bottom: 0;
+  z-index: 100; 
+  background-color: #fff;
+  /* border: 1px solid; */
+}
+.orderPage .page-clear{
+  position:absolute;
+  top:10rpx;
+  right:10rpx;
+
+}
+.orderPage-container{
+  padding: 0 20rpx;
+  border: 1px solid #9e9e9e;
+}
+.orderPage image{
+  position: absolute;
+  top: -50rpx;
+  border-radius: 10rpx; 
+  border: 1px solid #9e9e9e;
+}
+.orderPage .title{
+  padding-left: 160rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.orderPage .size{
+  font-size:0.6rem;
+  line-height:60rpx;
+}
+.orderPage .size button,
+.remain button{
+  display: inline-block; 
+  font-size:0.6rem;
+  vertical-align:top;
+}
+.orderPage .size,
+.orderPage .remain{
+  font-size:0.6rem;
+  line-height:30px;
+  padding: 10rpx 0;
+}
+.orderPage .confirm{
+  border-radius: 0;
+}
+.orderPage .bigtext{
+  font-size: 0.7rem;
+}
