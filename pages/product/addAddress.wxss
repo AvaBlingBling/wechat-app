@@ -42,3 +42,7 @@ form{
 .cancel_confirm .confirm{
   color: green;
 }
+.submit{
+  width:100%;
+  border-radius:0;
+}

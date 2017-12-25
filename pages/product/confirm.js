@@ -16,7 +16,7 @@ Page({
   },
   //新建地址
   addAddress: function(){
-    wx.redirectTo({
+    wx.navigateTo({
       url: './addAddress',
     })
   },
@@ -38,7 +38,7 @@ Page({
   },
   //优惠券
   coupon:function(){
-    wx.redirectTo({
+    wx.navigateTo({
       url: './coupon',
     })
   },
