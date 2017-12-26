@@ -1,0 +1,46 @@
+<view class="container">
+  <view class='status'>
+    <text>待付款</text>
+    <view class='status_pic'><image src='/images/kefu.jpg'></image></view>
+  </view>
+  <view class='info'>
+      <view class='info_icon'>
+          <text>√</text>
+      </view>
+      <view class='info_message'>
+        <text>老王，1374859490</text>
+        <text>北京市xx街xx</text>
+      </view>
+  </view>
+   <view class='commodity'>
+          <view class='commodity_pic'>
+            <image src="/images/food.jpg"></image>
+          </view>
+          <view class='commodity_name'>
+            <text>有机食物大礼包</text>
+            <text>500g,春节喜庆礼包</text>
+          </view>
+          <view class='commodity_prise'>
+            <text>￥233</text>
+            <text>× 1</text>
+          </view>
+   </view>
+   <view class='details'>
+      <view class='details_freight'>
+        <text>运费</text>
+        <text>￥ 0</text> 
+      </view>
+      <view class='details_favourable'>
+        <text>优惠</text>
+        <text>￥ 10</text>
+      </view>
+      <view class='details_total'>
+        <text>合计（含运费）</text>
+        <text>￥ 233.00</text>
+      </view>
+   </view>
+   <view class='order_message'>
+      <text class='order_number'>订单编号：47835884955940</text>
+      <text class='order_time'>下单时间：2017年12月25日 14:00</text>
+   </view>
+</view>

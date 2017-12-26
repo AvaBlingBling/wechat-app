@@ -1,0 +1,129 @@
+/* pages/order/index.wxss */
+.status-box{
+  width: 100%;
+  background-color: white;  
+  border: 1rpx solid #ccc;
+  margin-top: 20rpx;
+}
+.status-box .tabFun{
+  width: 100%;
+}
+.status-box .tabFun li{
+  width: 25%;
+  display: inline-block;
+  padding: 30rpx 0rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 28rpx;
+  transition: .5s all;
+  border-bottom: 1px solid transparent;
+}
+.active{
+  color: red;
+  border-bottom: 1px solid red!important;
+}
+.content{
+  width: 100%;
+}
+.content .number{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  padding: 20rpx 30rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  border-top: 2rpx solid #ccc;
+
+}
+.content .number text{
+  font-size: 25rpx;
+}
+.content .number text:last-of-type{
+  font-size: 28rpx;
+  color: red;
+}
+.commodity{
+  width: 100%;
+  display: flex; 
+}
+.commodity_pic{
+ flex: 1;
+}
+.commodity image{
+   width: 250rpx;
+   height: 230rpx;
+    padding: 10rpx 30rpx 1rpx 20rpx;   
+}
+.commodity_name{
+  flex: 3;
+  display: flex;  
+  flex-direction:column;
+}
+.commodity_name text{
+   font-size: 25rpx;
+   padding-top: 5rpx;
+}
+.commodity_name text:nth-child(1){
+   font-size: 30rpx;
+   font-weight: 900;
+   margin-top: 10rpx;
+}
+.commodity_prise{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 40rpx 0rpx 0rpx;
+  text-align: right
+}
+.commodity_prise text{
+  font-size: 30rpx;
+}
+.commodity_prise text:last-child{
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 15rpx
+}
+.total{
+  background-color: white;
+   margin-top:  -4rpx;
+   text-align: right;
+   padding: 5rpx 30rpx 5rpx 0rpx;
+}
+.total view{
+  font-size: 30rpx;
+}
+.total text{
+  font-size: 28rpx;
+  color:red;
+}
+.handle{
+  height: 90rpx;
+  background-color: white;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  display: flex;
+  flex-direction:row-reverse;
+  align-items:center;
+}
+.handle .handle_pay,
+.handle .handle_cancel{
+     width: 135rpx;
+     height: 50rpx;
+     border-radius: 15rpx;
+     text-align: center;
+     border: 1rpx solid #ccc;
+      margin-right: 30rpx; 
+}
+.handle_pay text,
+.handle_cancel text{
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.handle .handle_pay{
+  background-color: red;
+}
+.handle_pay text{
+  color: white
+}
+
+

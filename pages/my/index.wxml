@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class='main'>
+  <view class='info'>
+    <view class='name'>jerry</view>
+    <image class='img' src='/images/my/tou.png' />
+  </view>
+  <view class='info-list'>
+    <view class='info-details'>
+      <text>我的优惠卷</text>
+      <navigator url=''>
+        <image src='/images/my/next.png' mode="widthFix" />
+      </navigator>
+    </view>
+    <view class='info-details'>
+      <text>地址管理</text>
+      <navigator url=''>
+        <image src='/images/my/next.png' mode="widthFix" />
+      </navigator>
+    </view>
+  </view>
+  <view class='info-list'>
+    <view class='info-details'>
+      <text>联系客服</text>
+      <navigator url=''>
+        <image src='/images/my/next.png' mode="widthFix" />
+      </navigator>
+    </view>
+  </view>
+</view>

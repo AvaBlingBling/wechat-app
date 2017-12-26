@@ -1,0 +1,64 @@
+/**index.wxss**/
+.main{
+  margin-top: 20rpx;
+}
+.info {
+  width: 750rpx;
+  height: 148rpx;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50rpx 0 46rpx;
+  box-sizing: border-box;
+  align-items: center;
+  border-top: 2rpx solid #999;
+  border-bottom: 1rpx solid #999;
+}
+
+.info .name {
+  font-size: 32rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #000;
+}
+
+.info .img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.info-list {
+  padding: 0 32rpx 0 28rpx;
+  margin-top: 46rpx;
+  background: white;
+  border-top: 2rpx solid #999;
+  border-bottom: 1rpx solid #999;
+}
+
+.info-details {
+  padding: 4rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #999;
+}
+
+.info-details:last-of-type {
+  border-bottom: 0;
+}
+
+.info-details navigator {
+  width: 60rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.info-details text {
+  font-size: 28rpx;
+}
+
+.info-details navigator image {
+  width: 40rpx;
+}

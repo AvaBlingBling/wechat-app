@@ -1,0 +1,124 @@
+<!--pages/order/index.wxml-->
+<view class='container'>  
+  <view class='status-box'>
+    <ul class="tabFun" bindtap="tab">
+      <li class="{{curIndex=='0'? 'active' : ''}}" data-id="0">全部</li>
+      <li class="{{curIndex=='1'? 'active' : ''}}" data-id="1">待付款</li>
+      <li class="{{curIndex=='2'? 'active' : ''}}" data-id="2">待发货</li>
+      <li class="{{curIndex=='3'? 'active' : ''}}" data-id="3">待收获</li>
+    </ul>
+  </view>
+<view style="display:{{curIndex=='0' ? 'block':'none' }}">
+  <view class='content'wx:for="{{products}}"wx:key="index" >
+    <view class='number'>
+        <text>编号：{{item.numbers}}</text>
+        <text>{{item.state}}</text>
+    </view>
+
+   <view class='usermotto' bindtap="toast" >
+       <view class='commodity'>
+          <view class='commodity_pic'>
+            <image src="{{item.imgurls}}"></image>
+          </view>
+          <view class='commodity_name'>
+            <text>{{item.text}}</text>
+            <text>{{item.weight}}</text>
+          </view>
+          <view class='commodity_prise'>
+            <text>￥{{item.prise}}</text>
+            <text>× {{item.amount}}</text>
+          </view>
+      </view>
+   </view>
+
+    <view class='total'>
+      <view>合计：
+        <text>￥{{item.total}}</text>
+      </view>
+    </view>
+    <view class='handle'>
+      <view class='handle_pay '>
+        <text>{{item.pay}}</text>
+      </view>
+      <view class='handle_cancel' bindtap="modalcnt">
+        <text>{{item.cancel}}</text>
+      </view>
+    </view>
+  </view>
+ </view>
+ <view style="display:{{curIndex=='1' ? 'block':'none' }}">
+
+    <view class='content'wx:for="{{products}}" >
+    <view class='number'>
+        <text>编号：{{item.numbers}}</text>
+        <text>{{item.state}}</text>
+    </view>
+    <view class='commodity'>
+      <view class='commodity_pic'>
+        <image src="{{item.imgurls}}"></image>
+      </view>
+      <view class='commodity_name'>
+        <text>{{item.text}}</text>
+        <text>{{item.weight}}</text>
+      </view>
+      <view class='commodity_prise'>
+        <text>￥{{item.prise}}</text>
+        <text>× {{item.amount}}</text>
+      </view>
+    </view>
+    <view class='total'>
+      <view>合计：
+        <text>￥{{item.total}}</text>
+      </view>
+    </view>
+    <view class='handle'>
+      <view class='handle_pay '>
+        <text>{{item.pay}}</text>
+      </view>
+      <view class='handle_cancel'>
+        <text>{{item.cancel}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+ <view style="display:{{curIndex=='2' ? 'block':'none' }}">
+    <view class='content'wx:for="{{products}}"wx:key="index" >
+    <view class='number'>
+        <text>编号：{{item.numbers}}</text>
+        <text>{{item.state}}</text>
+    </view>
+
+   <view class='usermotto' bindtap="toast" >
+       <view class='commodity'>
+          <view class='commodity_pic'>
+            <image src="{{item.imgurls}}"></image>
+          </view>
+          <view class='commodity_name'>
+            <text>{{item.text}}</text>
+            <text>{{item.weight}}</text>
+          </view>
+          <view class='commodity_prise'>
+            <text>￥{{item.prise}}</text>
+            <text>× {{item.amount}}</text>
+          </view>
+      </view>
+   </view>
+
+    <view class='total'>
+      <view>合计：
+        <text>￥{{item.total}}</text>
+      </view>
+    </view>
+    <view class='handle'>
+      <view class='handle_pay ' bindtap='refund'>
+        <text>{{item.pay}}</text>
+      </view>
+      <view class='handle_cancel'>
+        <text>{{item.cancel}}</text>
+      </view>
+    </view>
+  </view>
+ </view>
+ <view style="display:{{curIndex=='3' ? 'block':'none' }}">3</view>
+</view> 
+
