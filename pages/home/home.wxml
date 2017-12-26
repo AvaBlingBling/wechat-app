@@ -43,11 +43,6 @@
       <view style="display:{{curIndex=='3'?'block':'none'}}">4</view>
     </view>
   </view>
-  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-    <!-- <view class="picker">
-      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
-    </view> -->
-  </picker>
    <!-- <contact-button size="30" session-from="weapp">联系客服</contact-button>  -->
   <button bindcontact="contacttap" class="contact-button" open-type="contact" session-from="weapp">
     <image class="cs_image" mode="aspectFit" src="../images/tab3.png"></image>    

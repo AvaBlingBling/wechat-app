@@ -1,0 +1,24 @@
+<!--pages/product/coupon.wxml-->
+<view class="tab">
+  <view class="tab_top bottom-border">
+    <ul bindtap="tabFun">
+      <li class="{{curIndex=='0'? 'active' : ''}}" data-id="0">未使用</li>
+      <li class="{{curIndex=='1'? 'active' : ''}}" data-id="1">已使用</li>
+      <li class="{{curIndex=='2'? 'active' : ''}}"  data-id="2">已过期</li>
+    </ul>
+  </view>
+  <view class="tab_content">
+    <view style="display:{{curIndex=='0'?'block':'none'}}">
+      <view class="font12 text-desc">优惠券秒杀、拼团不可用</view>
+      <view class="coupon" hover-class="coupon-select" wx:for="{{coupon}}" wx:key="index" bindtap="bindCoupon" data-desc="{{item.desc}}">
+        <view class="coupon-content font14">
+          <view class="red"><text style="font-size:36px">{{item.discount}}</text>元</view>
+          <view class="">{{item.condition}}</view>
+        </view>
+        <view class="validity"><text class="font12">有效期：  {{item.validity}}</text></view>
+      </view>
+    </view>
+    <view style="display:{{curIndex=='1'?'block':'none'}}">2</view>
+    <view style="display:{{curIndex=='2'?'block':'none'}}">3</view>
+  </view>
+</view>

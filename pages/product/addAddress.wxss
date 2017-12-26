@@ -21,11 +21,11 @@ form{
 }
 .area{
   position: fixed;
-  bottom: 0;
+  bottom: 47px;
 }
 .area-picker{
-  width: 50%;
-  height: 600rpx;
+  width: 80%;
+  height: 400rpx;
   margin: 0 auto;
 }
 .area-picker view{

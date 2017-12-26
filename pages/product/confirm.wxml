@@ -1,8 +1,20 @@
 <!--pages/product/confirm.wxml确认订单页-->
 <view class="container">
-  <view class="add-address border-top-bottom" bindtap="addAddress">
+  <view wx:if="{{addressData.length}}" class="add-address border-top-bottom font14" bindtap="addAddress">
     <view class="add-circle">+</view>
     <text>新建收货地址</text>
+  </view>
+  <view wx:else class="add-address border-top-bottom font14">
+    <view class="add-circle">√</view>
+    <view class="add-content">
+      <view class="font12 col-9">
+        <view>{{addressData.name}}，{{addressData.phone}}</view>
+        <view>{{addressData.province+' '+addressData.city+' '+addressData.zone+' '+addressData.address}}</view>
+      </view>
+      <view class="col-3">
+        <image class="right col-3" src="../images/edit.jpg" mode="widthFix" bindtap="editAddress"/>
+      </view>
+    </view>
   </view>
   <view class="order">
     <image src="{{orderPage.img}}" mode="widthFix" class="s-img col-3"/>
@@ -24,7 +36,11 @@
   </view>
   <view class="font14 bottom-border order-item">
     <text>优惠券</text>
-    <text class="right" bindtap="coupon"><text class="font12" style="color:#ccc">未使用</text>></text>
+    <text class="right" bindtap="coupon">
+      <text wx:if="{{coupon}}" class="font12" style="color:red">{{coupon}}</text>
+      <text wx:else class="font12" style="color:#ccc">未使用</text>
+      <text>></text>
+    </text>
   </view>
   <view class="font14 bottom-border order-item message">
     <text>买家留言：</text>

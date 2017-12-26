@@ -41,21 +41,17 @@
   height: 350rpx;
   padding: 5%;
 }
-.tab_top ul li{
-  width:20%;
+.tab .tab_top ul li{
+  width:20%; 
   display:inline-block;
   text-align:center;
-  font-size:0.6rem;
+  font-size:0.8rem;
   border-bottom: 1px solid transparent; 
   transition:0.5s all;
   padding:5px;
   margin:1%;
 }
-.active{
-  color: red;
-  border-bottom: 1px solid red!important; 
-}
-.tab_content{
+.tab .tab_content{
   padding: 0 50rpx;
 }
 .tab_content .products{

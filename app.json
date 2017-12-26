@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/product/addAddress",
+    "pages/product/coupon",
     "pages/product/confirm",
+    "pages/product/addAddress",
     "pages/product/detail",
-    "pages/home/home",
     "pages/index/index",
     "pages/logs/logs"
   ],

@@ -1,5 +1,6 @@
 // pages/product/addAddress.js
 const data = require('../../utils/area');
+const { address } = require('../model/model');
 // console.log(data.area)
 
 Page({
@@ -15,8 +16,6 @@ Page({
     zoneIndex: 0,
     zone: '',
     showProvince: false,
-    showCity: false,
-    showZone: false,
   },
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
@@ -31,11 +30,6 @@ Page({
     })
     
   }, 
-  selectCity: function () {
-    this.setData({
-      showCity: true
-    })
-  },
   cancel: function () {
     this.setData({
       showProvince: false
@@ -48,8 +42,6 @@ Page({
     const zoneName = area[provinceIndex].sub[cityIndex].sub[zoneIndex].name;
     this.setData({
       showProvince:false,
-      showCity: false,
-      showZone: false,
       province: provinceName,
       city: cityName,
       zone: zoneName
@@ -72,7 +64,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    if(options.id){
+      //假数据
+      this.setData({ ...address})
+      wx.setNavigationBarTitle({
+        title: '修改收货地址'
+      })
+    }
   },
 
   /**

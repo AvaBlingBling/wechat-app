@@ -1,10 +1,13 @@
 // pages/product/confirm.js
+const {address} = require('../model/model');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    addressData: {},
     orderPage: {
       img: '../images/1.jpg',
       text: '有机食物大礼包',
@@ -18,6 +21,14 @@ Page({
   addAddress: function(){
     wx.navigateTo({
       url: './addAddress',
+    })
+  },
+  //编辑地址
+  editAddress: function(){
+    wx.navigateTo({
+      //根据当前用户以及地址编号跳转到新建地址页面
+      url: './addAddress?id=1',
+      // url: './addAddress',
     })
   },
   //运费
@@ -47,7 +58,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if (options.coupon){
+      this.setData({
+        coupon: options.coupon
+      })
+    }
   },
 
   /**
@@ -61,7 +76,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    //重新获取地址
+    this.setData({
+      addressData: address
+    })
   },
 
   /**

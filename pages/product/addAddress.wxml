@@ -2,11 +2,11 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="section bottom-border font14">
     <view class="section__title col-3">收货人</view>
-    <input class='col-9' name="name" placeholder="姓名" />
+    <input class='col-9' name="name" placeholder="姓名" value="{{name}}" />
   </view>
   <view class="section bottom-border font14">
     <view class="section__title  col-3">联系电话</view>
-    <input class='col-9' name="phone" placeholder="手机或电话号码" />
+    <input class='col-9' name="phone" placeholder="手机或电话号码" value="{{phone}}"/>
   </view>
   <view class="section bottom-border font14">
     <view class="section__title  col-3">收货地区</view>
@@ -22,11 +22,11 @@
   </view>
   <view class="section bottom-border font14">
     <view class="section__title  col-3">详细地址</view>
-    <input  class='col-9' name="address" placeholder="街道地址" />
+    <input  class='col-9' name="address" placeholder="街道地址" value="{{address}}" />
   </view>
   <view class="section bottom-border font14">
     <view class="section__title  col-3">邮政编码</view>
-    <input  class='col-9' name="number" placeholder="邮政编码（选填）" />
+    <input  class='col-9' name="number" placeholder="邮政编码（选填）" value="{{number}}" />
   </view>
   <view class="controls">
     <button formType="submit" type="primary" class="submit">保存</button>
