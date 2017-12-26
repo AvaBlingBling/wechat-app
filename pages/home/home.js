@@ -9,28 +9,28 @@ const app = getApp()
 Page({
   data: {
     imgUrls: [
-      '../images/1.jpg',
-      '../images/2.jpg',
-      '../images/3.jpg'
+      '../../images/1.jpg',
+      '../../images/2.jpg',
+      '../../images/3.jpg'
     ],
     newArrival:{
-      pic1: '../images/1.jpg',
-      pic2: '../images/2.jpg',
-      pic3: '../images/3.jpg',
-      pic4:'../images/4.jpg'
+      pic1: '../../images/1.jpg',
+      pic2: '../../images/2.jpg',
+      pic3: '../../images/3.jpg',
+      pic4:'../../images/4.jpg'
     },
     curIndex: '0',//记录tab当前页
     products: [{
       id:1,
       url:'../product/detail',
-      imgurl:'../images/1.jpg',
+      imgurl:'../../images/1.jpg',
       text:'新款施华洛世奇恶魔之眼手环',
       price:500,
       initial:1600
     }, {
       id: 2,
       url: '../product/detail',
-      imgurl: '../images/2.jpg',
+      imgurl: '../../images/2.jpg',
       text: '新款施华洛世奇恶魔之眼手环',
       price: 500,
       initial: 1600

@@ -6,33 +6,47 @@
     "pages/product/coupon",
     "pages/product/detail",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/order/index",
+    "pages/orderdetails/index",
+    "pages/cart/index",
+    "pages/my/index",
+    "pages/details/index",
+    "pages/brand/index",
+    "pages/list/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
+    "color": "#000",
+    "selectedColor": "#f00",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "首页",
-        "selectedIconPath": "pages/images/home.png"
+        "iconPath": "./images/tabbar/首页1.png",
+        "selectedIconPath": "./images/tabbar/首页.png",
+        "text": "门牙"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "订单",
-        "selectedIconPath": "pages/images/tab2.png"
+        "pagePath": "pages/order/index",
+        "iconPath": "./images/tabbar/订单1.png",
+        "selectedIconPath": "./images/tabbar/订单.png",
+        "text": "订单"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "个人中心",
-        "selectedIconPath": "pages/images/tab3.png"
+        "pagePath": "pages/my/index",
+        "iconPath": "./images/tabbar/我的1.png",
+        "selectedIconPath": "./images/tabbar/我的.png",
+        "text": "个人中心"
       }
-    ],
-    "color": "#333",
-    "selectedColor": "rgb(229, 28, 35)"
+    ]
   }
 }

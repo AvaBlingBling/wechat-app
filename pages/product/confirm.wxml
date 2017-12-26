@@ -8,7 +8,7 @@
         <view>{{address.province+' '+address.city+' '+address.zone+' '+address.address}}</view>
       </view>
       <view class="col-3">
-        <image class="right col-3" src="../images/edit.jpg" mode="widthFix" bindtap="editAddress"/>
+        <image class="right col-3" src="../../images/edit.jpg" mode="widthFix" bindtap="editAddress"/>
       </view>
     </view>
   </view>

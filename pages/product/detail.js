@@ -10,9 +10,9 @@ Page({
   data: {
     id: '',
     imgUrls: [
-      '../images/1.jpg',
-      '../images/1.jpg',
-      '../images/1.jpg'
+      '../../images/1.jpg',
+      '../../images/1.jpg',
+      '../../images/1.jpg'
     ],
     pcontent: {
       title: '有机食物大集合 | 健康过冬',
@@ -25,7 +25,7 @@ Page({
       discription: '<p style="font-size:0.7rem"><p>这里是商品介绍，你可以输入很多商品详情信息。</p><p>如产品规格、品牌介绍、商品图片、视频等。</p><br/><p>如果你无法简洁的表达你的想法,那只说明你还不够了解它。</p><p>-- 阿尔伯特·爱因斯坦</p><br/><p>如果你无法简洁的表达你的想法，那只说明你还不够了解它。</p><p>--阿尔伯特·爱因斯坦</p><img src="https://github.com/oopsguy/wechat-app-examples/blob/master/resources/cover.png?raw=true" width="100%"/></p>'
     },
     orderPage:{
-      img: '../images/1.jpg',
+      img: '../../images/1.jpg',
       text: '有机食物大礼包',
       price: 300,
       size: ['300g','500g'],
@@ -97,11 +97,11 @@ Page({
   onLoad: function (options) {
 
     if(options.id){
-      http.getService('',(data)=>{
-        this.setData({
-          id: options.id,
-        })
-      });
+      // http.getService('',(data)=>{
+      //   this.setData({
+      //     id: options.id,
+      //   })
+      // });
     }
   },
 

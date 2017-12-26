@@ -8,7 +8,7 @@ Page({
    */
   data: {
     orderPage: {
-      img: '../images/1.jpg',
+      img: '../../images/1.jpg',
       text: '有机食物大礼包',
       price: 305,
       size: '500g',
