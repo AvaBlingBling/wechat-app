@@ -8,6 +8,23 @@ const app = getApp()
 
 Page({
   data: {
+    coupon: [{
+      receive:false,
+      discount:50,
+      desc:'满399可用'
+    },{
+      receive:false,
+      discount:50,
+      desc:'满399可用'
+    }, {
+      receive:false,
+      discount: 50,
+      desc: '满399可用'
+    }, {
+      receive:false,
+      discount: 50,
+      desc: '满399可用'
+    }],
     imgUrls: [
       '../../images/1.jpg',
       '../../images/2.jpg',
@@ -36,9 +53,20 @@ Page({
       initial: 1600
     }],
   },
+  //领取优惠券
+  receive: function(e){
+    const idx = e.currentTarget.dataset.index;
+    let coupon = this.data.coupon;
+    coupon[idx].receive = true;
+    this.setData({ coupon});
+    wx.showToast({
+      title: '领取成功',
+      icon: 'success',
+      duration: 2000
+    })
+  },
+  //tab页切换
   tabFun: function (e){
-    // const hash = md5.hex_md5("123dafd");
-    // console.log(hash);
     const curIndex = e.target.dataset.id;
     if (curIndex !== ''){
       this.setData({
