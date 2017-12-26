@@ -7,7 +7,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addressData: {},
     orderPage: {
       img: '../images/1.jpg',
       text: '有机食物大礼包',
@@ -63,6 +62,11 @@ Page({
         coupon: options.coupon
       })
     }
+    if (options.address){
+      this.setData({
+        address: JSON.parse(options.address)
+      })
+    }
   },
 
   /**
@@ -77,9 +81,9 @@ Page({
    */
   onShow: function () {
     //重新获取地址
-    this.setData({
-      addressData: address
-    })
+    // this.setData({
+    //   addressData: address
+    // })
   },
 
   /**

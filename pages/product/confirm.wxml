@@ -1,20 +1,20 @@
 <!--pages/product/confirm.wxml确认订单页-->
 <view class="container">
-  <view wx:if="{{addressData.length}}" class="add-address border-top-bottom font14" bindtap="addAddress">
-    <view class="add-circle">+</view>
-    <text>新建收货地址</text>
-  </view>
-  <view wx:else class="add-address border-top-bottom font14">
+  <view wx:if="{{address}}" class="add-address border-top-bottom font14">
     <view class="add-circle">√</view>
     <view class="add-content">
       <view class="font12 col-9">
-        <view>{{addressData.name}}，{{addressData.phone}}</view>
-        <view>{{addressData.province+' '+addressData.city+' '+addressData.zone+' '+addressData.address}}</view>
+        <view>{{address.name}}，{{address.phone}}</view>
+        <view>{{address.province+' '+address.city+' '+address.zone+' '+address.address}}</view>
       </view>
       <view class="col-3">
         <image class="right col-3" src="../images/edit.jpg" mode="widthFix" bindtap="editAddress"/>
       </view>
     </view>
+  </view>
+  <view wx:else class="add-address border-top-bottom font14" bindtap="addAddress">
+    <view class="add-circle">+</view>
+    <text>新建收货地址</text>
   </view>
   <view class="order">
     <image src="{{orderPage.img}}" mode="widthFix" class="s-img col-3"/>
