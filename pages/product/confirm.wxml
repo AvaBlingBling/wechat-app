@@ -32,7 +32,7 @@
   </view>
   <view class="font14 bottom-border order-item">
     <text>运费</text>
-    <text class="right" bindtap="freight"><text class="font12">￥0</text>></text>
+    <text class="right" bindtap="freight"><text class="font12">￥{{freight}}</text>></text>
   </view>
   <view class="font14 bottom-border order-item">
     <text>优惠券</text>
@@ -47,7 +47,7 @@
     <input class="right" placeholder="点击给商家留言"/>
   </view>
   <view class="controls">
-    <div class="summary">合计：￥233.00</div>
-    <div class="bgRed checkpay"><navigator url="./pay" open-type="switchTab">立即支付</navigator></div>
+    <div class="summary">合计：￥{{orderPage.price*orderPage.count}}</div>
+    <div class="bgRed checkpay">立即支付</div>
   </view>
 </view>

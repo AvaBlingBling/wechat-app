@@ -10,11 +10,12 @@ Page({
     orderPage: {
       img: '../images/1.jpg',
       text: '有机食物大礼包',
-      price: 300,
+      price: 305,
       size: '500g',
       color: '高级灰',
       count: 1,
     },
+    freight:0,
   },
   //新建地址
   addAddress: function(){
@@ -80,10 +81,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    //重新获取地址
-    // this.setData({
-    //   addressData: address
-    // })
+    
   },
 
   /**
