@@ -9,7 +9,7 @@
     </ul>
   </view>
 <view style="display:{{curIndex=='0' ? 'block':'none' }}">
-  <view class='content'wx:for="{{products}}"wx:key="index" >
+  <view class='content' wx:for="{{products}}" wx:key="index" >
     <view class='number'>
         <text>编号：{{item.numbers}}</text>
         <text>{{item.state}}</text>
