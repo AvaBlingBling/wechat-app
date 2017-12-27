@@ -1,6 +1,6 @@
 <template name="product">
   <navigator url="{{url+'?id='+id}}">
-    <image src="{{imgurl}}"/>
+    <image src="{{imgurl}}" mode="widthFix"/>
     <text class="discription">{{text}}</text>
     <view><text class="mark">￥ </text><text>{{price}}</text><text class="initial">{{initial}}</text></view>
   </navigator>

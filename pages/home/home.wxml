@@ -12,18 +12,37 @@
     </swiper>
   </view>
   <!--优惠券  -->
-  <!-- <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" > -->
   <scroll-view class="scroll-view_W" scroll-x="true">
-    <!-- <view > -->
-      <view class="{{'coupon font12 ' + (item.receive?'receive':'')}}" wx:for="{{coupon}}" wx:key="{{index}}">
-        <view class="leftc">
-          <view class="font16"><text style="font-size:1.2rem">￥ </text><text>{{item.discount}}</text></view>
-          <view>{{item.desc}}</view>
-        </view>
-         <view class="rightc" bindtap="receive" data-index="{{index}}"><view>领</view><view>取</view></view> 
+    <view class="{{'coupon font12 ' + (item.receive?'receive':'')}}" wx:for="{{coupon}}" wx:key="{{index}}">
+      <view class="leftc">
+        <view class="font16"><text style="font-size:1.2rem">￥ </text><text>{{item.discount}}</text></view>
+        <view>{{item.desc}}</view>
       </view>
-    <!-- </view> -->
+        <view class="rightc" bindtap="receive" data-index="{{index}}"><view>领</view><view>取</view></view> 
+    </view>
   </scroll-view>
+  <!--秒杀  -->
+  <view class="section">
+    <view class="section__title">———— 秒杀 ————</view>
+    <scroll-view class="scroll-view_W" scroll-x="true">
+      <view class="flash-sale font12" wx:for="{{flashSale}}" wx:key="{{index}}">
+        <image src="{{item.imgurl}}" style="height:160px"/>
+        <view wx:if="{{item.robbed}}" class="sale-mask"><view class="sale-out"><text>抢光啦</text></view></view>
+        <view>
+          <text class="mark">￥ </text>
+          <text class="price">{{item.price}}</text>
+          <text class="initial">{{item.initial}}</text>
+          <text class="right">限量{{item.accout}}件</text>
+        </view>
+        <text class="discription">{{item.desc}}</text>
+        <view wx:if="{{item.robbed}}" class="robbed">已售罄</view>
+        <view wx:else>
+          <view class="time">{{item.time}}</view>
+          <view class="remind"><!-- <image src="" mode="widthFix"/> -->提醒我</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
   <!--每日上新  -->
   <view class="section section_gap">
     <view class="section__title">———— 每日上新 ————</view>
@@ -59,6 +78,7 @@
       <view style="display:{{curIndex=='3'?'block':'none'}}">4</view>
     </view>
   </view>
+  <!--客服会话  -->
   <button bindcontact="contacttap" class="contact-button" open-type="contact" session-from="weapp">
     <image class="cs_image" mode="aspectFit" src="../../images/tab3.png"></image>    
   </button>

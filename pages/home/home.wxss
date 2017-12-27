@@ -11,7 +11,6 @@
 }
 .scroll-view_W{
   margin: 20rpx 0;
-  display: flex;
   white-space: nowrap;
 }
 .coupon{
@@ -50,6 +49,66 @@
 .scroll-view_W .receive .rightc{
   color: rgba(0, 0, 0, 0.45);
   background: rgba(0, 0, 0, 0.25);
+}
+.flash-sale{
+  width: 320rpx;
+  display: inline-block;
+  margin-right: 40rpx;
+  position: relative;
+}
+.flash-sale .sale-mask{
+  height: 320rpx;
+  position: absolute;
+  top: 0;
+  background: #d9d9d9;
+  opacity: 0.5;
+  padding: 25%;
+  margin-bottom: 5rpx;
+}
+.flash-sale .sale-mask .sale-out{
+  height: 100%; 
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  align-items: center
+}
+.flash-sale .mark,
+.flash-sale .price,
+.flash-sale .right{
+  color: #ff4081;
+  line-height: 40rpx;  
+}
+.flash-sale .discription{
+  line-height:20px;
+  -webkit-line-clamp:1;
+  height:20px;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.flash-sale .robbed{
+  background: #c2c2c2;
+  color: #fff;
+  text-align: center;
+  line-height: 46rpx;
+}
+.flash-sale .time,
+.flash-sale .remind{
+  display: inline-block;
+  line-height: 46rpx;
+  text-align: center;
+}
+.flash-sale .time{
+  width: 60%;
+  background: #ccc;
+}
+.flash-sale .remind{
+  width: 40%;
+  background: #8bc34a;
+  color: #fff;
 }
 .section__title{
   font-size:12px;
@@ -120,11 +179,13 @@
 .products text{
   font-size:0.6rem;  
 }
-.products .mark{
+.products .mark,
+.flash-sale .mark{
   font-size:0.8rem;
   font-weight:600;
 }
-.products .initial{
+.products .initial,
+.flash-sale .initial{
   margin-left: 15rpx;
   color: #ccc;
   text-decoration:line-through;

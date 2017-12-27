@@ -9,7 +9,7 @@ const app = getApp()
 Page({
   data: {
     coupon: [{
-      receive:false,
+      receive:true,
       discount:50,
       desc:'满399可用'
     },{
@@ -24,6 +24,31 @@ Page({
       receive:false,
       discount: 50,
       desc: '满399可用'
+    }],
+    flashSale: [{
+      robbed: true,
+      imgurl: '../../images/1.jpg',
+      price: 59,
+      initial: 98,
+      accout: 30,
+      desc: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+      time: '12号13:00开抢'
+    },{
+      robbed: false,
+      imgurl: '../../images/1.jpg',
+      price: 59,
+      initial: 98,
+      accout: 30,
+      desc: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+      time: '12号13:00开抢'
+    }, {
+      robbed: false,
+      imgurl: '../../images/1.jpg',
+      price: 59,
+      initial: 98,
+      accout: 30,
+      desc: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+      time: '12号13:00开抢'
     }],
     imgUrls: [
       '../../images/1.jpg',
@@ -41,7 +66,7 @@ Page({
       id:1,
       url:'../product/detail',
       imgurl:'../../images/1.jpg',
-      text:'新款施华洛世奇恶魔之眼手环',
+      text:'新款施华洛世奇恶魔之眼手环新款施华洛世奇恶魔之眼手环新款施华洛世奇恶魔之眼手环',
       price:500,
       initial:1600
     }, {
