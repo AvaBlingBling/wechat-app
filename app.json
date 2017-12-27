@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/product/confirm",
+    "pages/home/home",
     "pages/product/addAddress",
     "pages/product/coupon",
     "pages/product/detail",

@@ -19,17 +19,32 @@ Page({
   },
   //新建地址
   addAddress: function(){
-    wx.navigateTo({
-      url: './addAddress',
+    // wx.navigateTo({
+    //   url: './addAddress',
+    // })
+    const that = this;
+    wx.chooseAddress({
+      success: function (res) {
+        const address = {
+          name: res.userName,
+          phone: res.telNumber,
+          province: res.provinceName,
+          city: res.cityName,
+          zone: res.countyName,
+          address: res.detailInfo,
+          number: res.postalCode
+        }
+        that.setData({address})
+      }
     })
   },
   //编辑地址
   editAddress: function(){
-    wx.navigateTo({
-      //根据当前用户以及地址编号跳转到新建地址页面
-      url: './addAddress?id=1',
-      // url: './addAddress',
-    })
+    // wx.navigateTo({
+    //   //根据当前用户以及地址编号跳转到新建地址页面
+    //   url: './addAddress?id=1',
+    //   // url: './addAddress',
+    // })
   },
   //运费
   freight: function(){
