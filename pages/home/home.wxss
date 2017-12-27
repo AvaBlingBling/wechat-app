@@ -53,7 +53,7 @@
 .flash-sale{
   width: 320rpx;
   display: inline-block;
-  margin-right: 40rpx;
+  margin: 0 20rpx;
   position: relative;
 }
 .flash-sale .sale-mask{
@@ -110,11 +110,31 @@
   background: #8bc34a;
   color: #fff;
 }
+.pintuan .marker{
+  background: #998b8c;
+  color: #fff;
+}
+.pintuan .kaituan{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ff4081;
+  padding: 5rpx 10rpx;
+}
+.open{
+  background: #ff4081;
+  color: #fff;
+  padding: 5rpx;
+  text-align: center;
+}
 .section__title{
-  font-size:12px;
-  color:#ccc;
+  color:#ccc;  
   text-align:center;
   margin:5px 0;  
+}
+.section__title text{
+  color:#000;  
+  margin: 0 30rpx;
 }
 .section__ctn{
   display:flex;

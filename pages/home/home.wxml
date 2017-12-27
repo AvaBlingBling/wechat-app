@@ -12,7 +12,7 @@
     </swiper>
   </view>
   <!--优惠券  -->
-  <scroll-view class="scroll-view_W" scroll-x="true">
+   <scroll-view class="scroll-view_W" scroll-x="true">
     <view class="{{'coupon font12 ' + (item.receive?'receive':'')}}" wx:for="{{coupon}}" wx:key="{{index}}">
       <view class="leftc">
         <view class="font16"><text style="font-size:1.2rem">￥ </text><text>{{item.discount}}</text></view>
@@ -20,10 +20,10 @@
       </view>
         <view class="rightc" bindtap="receive" data-index="{{index}}"><view>领</view><view>取</view></view> 
     </view>
-  </scroll-view>
+  </scroll-view> 
   <!--秒杀  -->
-  <view class="section">
-    <view class="section__title">———— 秒杀 ————</view>
+   <view class="section">
+    <view class="section__title">——<text class="font14">秒杀</text>——</view>
     <scroll-view class="scroll-view_W" scroll-x="true">
       <view class="flash-sale font12" wx:for="{{flashSale}}" wx:key="{{index}}">
         <image src="{{item.imgurl}}" style="height:160px"/>
@@ -34,18 +34,37 @@
           <text class="initial">{{item.initial}}</text>
           <text class="right">限量{{item.accout}}件</text>
         </view>
-        <text class="discription">{{item.desc}}</text>
+        <text class="discription font14">{{item.desc}}</text>
         <view wx:if="{{item.robbed}}" class="robbed">已售罄</view>
         <view wx:else>
           <view class="time">{{item.time}}</view>
-          <view class="remind"><!-- <image src="" mode="widthFix"/> -->提醒我</view>
+          <view class="remind">提醒我</view>
         </view>
       </view>
     </scroll-view>
+  </view> 
+  <!--拼团  -->
+  <view class="section">
+    <view class="section__title">——<text class="font14">拼团</text>——</view>
+    <scroll-view class="scroll-view_W" scroll-x="true">
+      <view class="flash-sale pintuan font12" wx:for="{{pintuan}}" wx:key="{{index}}">
+        <image src="{{item.imgurl}}" style="height:160px"/>
+        <text class="kaituan">开团</text>
+        <view>
+          <text class="marker">拼团价</text>
+          <text class="mark">￥ </text>
+          <text class="price">{{item.price}}</text>
+          <text class="initial">{{item.initial}}</text>
+          <text class="right">限量{{item.accout}}件</text>
+        </view>
+        <text class="discription font14">{{item.desc}}</text>
+        <view class="open">去开团</view>
+      </view>
+    </scroll-view>
   </view>
-  <!--每日上新  -->
+  <!--热门推荐  -->
   <view class="section section_gap">
-    <view class="section__title">———— 每日上新 ————</view>
+    <view class="section__title">——<text class="font14">热门推荐</text>——</view>
     <view class="section__ctn">
       <view class="section__ctn_1">
         <image class="section__ctn_img" mode="aspectFit" src="{{newArrival.pic1}}"></image>

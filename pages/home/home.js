@@ -50,6 +50,31 @@ Page({
       desc: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
       time: '12号13:00开抢'
     }],
+    pintuan: [{
+      robbed: true,
+      imgurl: '../../images/1.jpg',
+      price: 59,
+      initial: 98,
+      accout: 30,
+      desc: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+      time: '12号13:00开抢'
+    }, {
+      robbed: false,
+      imgurl: '../../images/1.jpg',
+      price: 59,
+      initial: 98,
+      accout: 30,
+      desc: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+      time: '12号13:00开抢'
+    }, {
+      robbed: false,
+      imgurl: '../../images/1.jpg',
+      price: 59,
+      initial: 98,
+      accout: 30,
+      desc: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+      time: '12号13:00开抢'
+    }],
     imgUrls: [
       '../../images/1.jpg',
       '../../images/2.jpg',
