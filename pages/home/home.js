@@ -138,4 +138,23 @@ Page({
     //获取每日上新的图片
     //获取轮播图的图片
   },
+  onShareAppMessage: function (res) {
+    debugger
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '门牙精选',
+      path: '/pages/home/home',
+      success: function (res) {
+        // 转发成功
+        console.log(res)
+      },
+      fail: function (res) {
+        // 转发失败
+        console.log(res)
+      }
+    }
+  },
 })
