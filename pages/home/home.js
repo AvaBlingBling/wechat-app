@@ -1,6 +1,5 @@
 const md5 = require('../../utils/md5.js')
 const http = require('../../utils/http.js')
-const config = require('../port.js')
 
 //index.js
 //获取应用实例
@@ -129,7 +128,7 @@ Page({
   },
   onLoad: function () {
     //先获取护肤产品的数据
-    // http.getService(config.port+'/cssconfig',(data)=>{
+    // http.getService('',(data)=>{
     //   console.log(data);
     //   this.setData({
     //     products: data
@@ -139,7 +138,6 @@ Page({
     //获取轮播图的图片
   },
   onShareAppMessage: function (res) {
-    debugger
     if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
