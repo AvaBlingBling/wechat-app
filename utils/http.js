@@ -40,7 +40,7 @@ const getService = (option, callback) => {
       'Rest-Auth': 'account=' + option.account + ',client_id=' + client_id + ',timestamp=' + date + ',signature=' + signature
     },
     success: (res) => {
-      console.log(res);
+      // console.log(res);
       callback(res.data)
     },
     fail: (err) => {
