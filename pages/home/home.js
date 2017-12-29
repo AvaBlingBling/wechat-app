@@ -128,14 +128,36 @@ Page({
   },
   onLoad: function () {
     //先获取护肤产品的数据
-    // http.getService('',(data)=>{
-    //   console.log(data);
-    //   this.setData({
-    //     products: data
-    //   })
-    // });
     //获取每日上新的图片
     //获取轮播图的图片
+    app.getUserInfo((data)=>{
+      wx.login({
+        success: function (res) {
+          if (res.code) {
+            const postData = {
+              code: res.code,
+              avatar: data.avatarUrl,
+              nickName: data.nickName,
+              province: data.province,
+              city: data.city,
+              gender: data.gender
+            }
+            http.postService({
+              url: 'http://192.168.0.46:8080/1.0/register',
+              account: '123456789',
+              api_method: '1.0/register',
+            }, postData, (data) => {
+              console.log(data);
+            });
+
+          } else {
+            console.log('获取用户登录态失败！' + res.errMsg)
+          }
+        }
+      });
+      
+    })
+    
   },
   onShareAppMessage: function (res) {
     if (res.from === 'button') {

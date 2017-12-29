@@ -9,13 +9,13 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    getService({
-      url: 'http://192.168.0.46:8080/user/info/123456789',
-      account: '123456789',
-      api_method: 'user/info/123456789',
-    },data=>{
-      console.log(data);
-    })
+    // getService({
+    //   url: 'http://192.168.0.46:8080/user/info/123456789',
+    //   account: '123456789',
+    //   api_method: 'user/info/123456789',
+    // },data=>{
+    //   console.log(data);
+    // })
 
   },
   getUserInfo: function (cb) {
