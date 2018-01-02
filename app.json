@@ -7,13 +7,17 @@
     "pages/product/detail",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/order/index",
     "pages/orderdetails/index",
     "pages/cart/index",
     "pages/my/index",
+    "pages/order/index",
     "pages/details/index",
     "pages/brand/index",
-    "pages/list/index"
+    "pages/list/index",
+		"pages/groupBooking/groupBooking",
+		"pages/groupBooking/groupWin",
+		"pages/groupBooking/groupInvite",
+		"pages/shoppingCart/shoppingCart"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,10 +40,10 @@
         "text": "门牙"
       },
       {
-        "pagePath": "pages/order/index",
+        "pagePath": "pages/shoppingCart/shoppingCart",
         "iconPath": "./images/tabbar/订单1.png",
         "selectedIconPath": "./images/tabbar/订单.png",
-        "text": "订单"
+        "text": "购物车"
       },
       {
         "pagePath": "pages/my/index",

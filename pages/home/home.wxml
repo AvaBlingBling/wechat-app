@@ -58,14 +58,16 @@
           <text class="right">限量{{item.accout}}件</text>
         </view>
         <text class="discription font14">{{item.desc}}</text>
-        <view class="open">去开团</view>
+				<navigator url="../groupBooking/groupBooking">
+        	<view class="open">去开团</view>
+				</navigator>
       </view>
     </scroll-view>
   </view>
   <!--热门推荐  -->
   <view class="section section_gap">
     <view class="section__title">——<text class="font14">热门推荐</text>——</view>
-    <view class="section__ctn">
+    <!-- <view class="section__ctn">
       <view class="section__ctn_1">
         <image class="section__ctn_img" mode="aspectFit" src="{{newArrival.pic1}}"></image>
         <image class="section__ctn_img" mode="aspectFit" src="{{newArrival.pic2}}"></image>
@@ -74,7 +76,22 @@
       <view class="section__ctn_2">
         <image class="section__ctn_img_vertical" mode="aspectFill" src="{{newArrival.pic4}}"></image>
       </view>
+    </view> -->
+    <view class='section_ctn'>
+      <view class='section_ctn_l'>
+        <image  mode='aspectFit' src='{{newArrival.pic1}}'/>
+      </view>
+      <view class='section_ctn_r'>
+        <text class='section_ctn_name'>111</text>
+        <text class='section_ctn_sell'>2222</text>
+        <view class='section_ctn_mask'><text>￥</text><text class='prise'>455</text><text class='initial'>1234</text></view>  
+      </view>
     </view>
+
+
+
+
+
   </view>  
   <!--tab页签  -->
   <view class="tab">

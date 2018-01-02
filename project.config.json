@@ -9,13 +9,9 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.5.4",
-	"appid": "touristappid",
-	"projectname": "wechat_sample_project",
+	"appid": "wx540a35fbd1d37e7b",
+	"projectname": "%E9%97%A8%E7%89%99",
 	"condition": {
-		"weapp": {
-			"current": -1,
-			"list": []
-		},
 		"search": {
 			"current": -1,
 			"list": []

@@ -9,40 +9,40 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // getService({
-    //   url: 'http://192.168.0.46:8080/user/info/123456789',
-    //   account: '123456789',
-    //   api_method: 'user/info/123456789',
-    // },data=>{
-    //   console.log(data);
-    // })
+     getService({
+      url: 'http://192.168.0.88:8088/user/info/123456789',
+      account: '123456789',
+     api_method: 'user/info/123456789',
+     },data=>{
+       console.log(data);
+    })
 
-  },
-  getUserInfo: function (cb) {
-    var that = this
-    if (this.globalData.userInfo) {
-      typeof cb == "function" && cb(this.globalData.userInfo)
-    } else {
-      //调用登录接口
-      wx.login({
-        success: function () {
-          wx.getUserInfo({
-            success: function (res) {
-              that.globalData.userInfo = res.userInfo
+   },
+   getUserInfo: function (cb) {
+     var that = this
+     if (this.globalData.userInfo) {
+       typeof cb == "function" && cb(this.globalData.userInfo)
+     } else {
+       //调用登录接口
+       wx.login({
+         success: function () {
+           wx.getUserInfo({
+             success: function (res) {
+               that.globalData.userInfo = res.userInfo
               typeof cb == "function" && cb(that.globalData.userInfo)
             }
           })
         }
       })
     }
-  },
-  onShow: function () {
+ },
+ onShow: function () {
     // console.log('App Show')
-  },
-  onHide: function () {
-    // console.log('App Hide')
-  },
-  globalData: {
-    userInfo: null
-  }
+   },
+   onHide: function () {
+     // console.log('App Hide')
+   },
+   globalData: {
+     userInfo: null
+   }
 })

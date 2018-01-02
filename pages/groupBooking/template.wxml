@@ -1,0 +1,36 @@
+<!-- <template name="buyproduct"> -->
+  <!-- 购买详情 -->
+	<view class="shade" wx:if="{{buyshow}}">
+		<view class="buy_details">
+			<!-- 购买详情 -->
+			<view class="product_details">
+				<view class="product_img">
+					<icon type="clear" bindtap="buyhide" class='clear'></icon>
+					<view class="left"><image src="{{buy.img}}" mode="widthFix"></image></view>
+					<view class="right">
+						<view>{{pcontent.title}}</view>
+						<view class="text_red">￥{{pcontent.newPrice}}</view>
+					</view>
+				</view>
+				<!-- 商品参数 -->
+				<view class="specification">
+					<view>规格 :</view>
+					<view class="bgcolor">{{buy.specification}}</view>
+					<view>颜色 :</view>
+					<view class="bgcolor">{{buy.color}}</view>
+				</view>
+				<!-- 购买数量 -->
+				<view class="buy_num">
+					<view class="left">购买数量 :</view>
+					<view class="right">
+						<button class="case" bindtap='minus' disabled='{{buy.num>1?false:true}}'>-</button>
+						<text class="case">{{buy.num}}</text>
+						<button class="case" bindtap='plus' disabled='{{buy.num>=buy.surplus?true:false}}'>+</button>
+					</view>
+				</view>
+			</view>
+			<!-- 确定 -->
+			<view class="confirm" bindtap='buy_confirm'>确定</view>
+		</view>
+	</view>
+<!-- </template> -->

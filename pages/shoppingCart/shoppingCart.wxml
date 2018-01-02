@@ -1,0 +1,85 @@
+<view class='container'>  
+<view style="display:{{curIndex=='0' ? 'block':'none' }}">
+  <view class='content' wx:for="{{products}}" wx:key="index" >
+
+   <view class='usermotto' bindtap="toast" >
+	 
+	 		<view class="checked">
+				 <checkbox-group bindchange="checkboxChange">
+					<label class="checkbox">
+						<checkbox color="#FF4081" class="ws-chenckbox" value="{{item.prise}}" checked="{{item.check}}"></checkbox>
+					</label>
+				</checkbox-group>  
+			</view>
+      <view class='commodity'>
+          <view class='commodity_pic'>
+            <image src="{{item.imgurls}}"></image>
+          </view>
+          <view class='commodity_name'>
+            <text>{{item.text}}</text>
+            <text class="gray">{{item.weight}}</text>
+          </view>
+          <view class='commodity_prise'>
+            <text>￥{{item.prise}}</text>
+            <text>× {{item.amount}}</text>
+          </view>
+      </view>
+   </view>
+	 <view class="delete"><text bindtap="modalcnt">删除</text></view>
+  </view>
+ </view>
+
+ <view style="display:{{curIndex=='1' ? 'block':'none' }}">
+
+    <view class='content'wx:for="{{products}}" >
+    <view class='commodity'>
+      <view class='commodity_pic'>
+        <image src="{{item.imgurls}}"></image>
+      </view>
+      <view class='commodity_name'>
+        <text>{{item.text}}</text>
+        <text>{{item.weight}}</text>
+      </view>
+      <view class='commodity_prise'>
+        <text>￥{{item.prise}}</text>
+        <text>× {{item.amount}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+ <view style="display:{{curIndex=='2' ? 'block':'none' }}">
+    <view class='content'wx:for="{{products}}"wx:key="index" >
+
+   <view class='usermotto' bindtap="toast" >
+       <view class='commodity'>
+          <view class='commodity_pic'>
+            <image src="{{item.imgurls}}"></image>
+          </view>
+          <view class='commodity_name'>
+						<text>{{item.text}}</text>
+						<text>{{item.weight}}</text>            
+          </view>
+          <view class='commodity_prise'>
+            <text>￥{{item.prise}}</text>
+            <text>× {{item.amount}}</text>
+          </view>
+      </view>
+   </view>
+  </view>
+ </view>
+ <view style="display:{{curIndex=='3' ? 'block':'none' }}">3</view>
+
+ <view class="checkedTotal">
+	<view class="checkAll">
+		<checkbox color="#FF4081" bindtap="change"></checkbox>
+		<text>全选</text>
+	</view>
+	<view class="moneytotal">
+		<text>合计 : </text>
+		<text class="moneycolor">￥ {{closetotal}}</text>
+		<text>{{freight>0?"含运费" : "不含运费"}}</text>
+	</view>
+	<text class="close">结算</text>
+ </view>
+</view> 

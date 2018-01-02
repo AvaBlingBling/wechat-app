@@ -1,0 +1,269 @@
+.container{
+	position:relative;
+}
+
+/* banner */
+.banner{
+	border-top:1px solid #9E9E9E;
+	border-bottom:1px solid #9E9E9E;
+	padding:20rpx 0;
+}
+
+/* 左边图片和右边文字 */
+.left,.right{
+	display: inline-block;
+	width:45%;
+	font-size:12px;
+}
+
+/* 右边详细信息 */
+.right{
+	padding:30rpx 0 0 6rpx;
+	width:55%;
+}
+
+/* 加粗 */
+.bold{
+	font-size:14px;
+	font-weight:bold;
+}
+
+/* 开团价 */
+.province_red{
+	color:#E51C23;
+	margin-top:20rpx;
+}
+
+/* 原价 */
+.used_price{
+	text-decoration: line-through;
+}
+
+/* 开团立省 */
+.province{
+	padding:6rpx;
+	background:#E51C23;
+	color:#fff;
+	margin:10rpx 0 0 12rpx;
+}
+
+/* 人气 */
+.moods{
+	margin:20rpx 0;
+}
+
+/* 开团成功 邀请朋友 */
+.group_detail{
+	margin-top:10rpx;
+	border-top:1px solid #9E9E9E;
+	border-bottom:1px solid #9E9E9E;
+	font-size:12px;
+	text-align: center;
+	padding:30rpx 0 20rpx 0;
+}
+
+/* 开团成功还差人数 */
+.bad_man{
+	font-size:14px;
+}
+
+.text_red{
+	color:#E51C23;
+}
+
+/* 倒计时 */
+.only_leave{
+	margin:16rpx 0;
+}
+
+/* 倒计时边框 */
+.count_down{
+	padding:6rpx;
+	border:1px solid #9E9E9E;
+}
+
+/* 团长 */
+.colonel view{
+	display:inline-block;
+	width:80rpx;
+	height:80rpx;
+}
+
+/* 团长照片 */
+.colonel view image{
+	width:100%;
+	height:80rpx;
+	border-radius:50%;
+	vertical-align: middle;
+}
+
+/* 邀请朋友 */
+.invite{
+	width:50%;
+	height:40px;
+	text-align: center;
+	line-height: 40px;
+	background: #E51C23;
+	font-size:16px;
+	color:#fff;
+	margin:20rpx auto;
+	padding-left:10%;
+}
+
+/* 分享图标 */
+.invite image{
+	height:20px;
+	width:20px;
+	margin-left:30rpx;
+	vertical-align: middle;
+}
+
+/* 拼团 */
+.group_details{
+	padding:0 12rpx;
+	font-size:14px;
+	margin-top:20rpx;
+}
+
+/* 拼团规则 */
+.group_rule{
+	border:1px solid #9E9E9E;
+	text-align: center;
+	padding-top:10rpx;
+}
+
+.rule_title{
+  display: inline-block;
+  width:calc(100% - 6em);
+  padding-left:6em;
+  box-sizing:border-box;
+}
+
+/* 规则详情 */
+.rule_detail{
+  color:#9E9E9E;
+  display: inline-block;
+  width:6em;
+}
+
+/* 123步骤 */
+.group_rule .step{
+	margin:15px 0 10px 0;
+}
+
+/* 圆 */
+.group_rule .circle{
+	display: inline-block;
+	width: 60rpx;
+	height:60rpx;
+	line-height:60rpx;
+	border:1px solid #9E9E9E;
+	border-radius:50%;
+}
+
+/* 元之间横线 */
+.group_rule .striping{
+	display: inline-block;
+	border-top:1px solid #9E9E9E;
+	width:210rpx;
+	vertical-align: middle;
+}
+
+/* 商品详情标题 */
+.group_rule .product_details{
+	border:1px solid #9E9E9E;
+	height:60rpx;
+	line-height:60rpx;
+	border-left:0;
+	border-right:0;
+}
+
+/* 步骤详情 */
+.step_details{
+	text-decoration: none;
+}
+
+.step_one,.step_two,.step_three{
+  display: inline-block;
+	vertical-align: top;
+}
+
+.step_one{
+  width:22%;
+}
+
+.step_two{
+  width:32%;
+}
+
+.step_three{
+  width:40%;
+}
+
+/* 客服 */
+contact-button,.contact-button{
+  background-color: transparent; 
+  border: 0px;
+  width: 90rpx;
+  height: 90rpx;  
+  position: fixed;
+  bottom: 140rpx;
+  right: 40rpx;
+   padding: 0;  
+  font-size: 0.6rem;
+	z-index:99;
+}
+.contact-button:after {
+   border: 0px; 
+}
+contact-button .cs_image,
+.contact-button .cs_image{
+  width: 90rpx;
+  height: 90rpx;
+}
+
+/* 拼团规则弹窗 */
+/* 遮罩层 */
+.shade{
+	position:absolute;
+	top:0;
+	left:0;
+	background:rgba(68,68,68,.4);
+	height:100%;
+}
+
+/* 弹窗 */
+.pop_up{
+	position:fixed;
+	top:15%;
+	left:50%;
+	margin-left:-250rpx;
+	border-radius:6px;
+	padding:10px;
+	background:#fff;
+	width:500rpx;
+	font-size:12px;
+}
+
+/* 关闭按钮 */
+.clear{
+	position:absolute;
+	right:10rpx;
+	top:10rpx;
+}
+
+/* 开头加粗 */
+.title_bold{
+	font-weight:bold;
+}
+
+/* 规则标题 */
+.pop_title{
+	margin:10rpx 0 -20rpx 0;
+	text-align: center;
+}
+
+/* 规则详情 */
+.pop_detail{
+	margin:60rpx 0;
+}

@@ -1,17 +1,13 @@
 /**index.wxss**/
-.main{
-  margin-top: 20rpx;
-}
 .info {
   width: 750rpx;
-  height: 148rpx;
+  height: 160rpx;
   background: white;
   display: flex;
   justify-content: space-between;
   padding: 0 50rpx 0 46rpx;
   box-sizing: border-box;
   align-items: center;
-  border-top: 2rpx solid #999;
   border-bottom: 1rpx solid #999;
 }
 
@@ -20,6 +16,7 @@
   height: 120rpx;
   line-height: 120rpx;
   color: #000;
+  font-weight: 900;
 }
 
 .info .img {

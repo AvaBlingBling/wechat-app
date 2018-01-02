@@ -1,0 +1,193 @@
+page{
+	background:#fff;
+}
+
+.container{
+	padding:0 4rpx;
+}
+
+.usermotto{
+	padding-right:10rpx;
+}
+
+.status-box{
+  width: 100%;
+  background-color: white;  
+  border: 1rpx solid #ccc;
+  margin-top: 20rpx;
+}
+.status-box .tabFun{
+  width: 100%;
+}
+.status-box .tabFun li{
+  width: 25%;
+  display: inline-block;
+  padding: 30rpx 0rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 28rpx;
+  transition: .5s all;
+  border-bottom: 1px solid transparent;
+}
+.active{
+  color: red;
+  border-bottom: 1px solid red!important;
+}
+.content{
+  width: 100%;
+	border:1px solid #9e9e9e;
+	margin:20rpx auto;
+	padding-top:20rpx;
+}
+
+.content:first-child{
+	margin-top:0;
+}
+
+.commodity{
+  width: 90%;
+  display: inline-block; 
+	background:#D9D9D9;
+}
+.commodity_pic{
+ 	width:20%;
+	 display: inline-block;
+}
+.commodity image{
+  width: 100%;
+	height:160rpx;
+  padding:4rpx 0;
+	margin-left:-4rpx;
+	vertical-align: middle;
+}
+.commodity_name{
+	width:60%;
+  display: inline-block;  
+  flex-direction:column;
+	vertical-align: top;
+	padding-left:20rpx;
+}
+.commodity_name text{
+   font-size: 25rpx;
+   padding-top: 5rpx;
+	 display: block;
+}
+.commodity_name text:nth-child(1){
+   font-size: 30rpx;
+   font-weight: 900;
+   margin-top: 10rpx;
+}
+.commodity_prise{
+  width:20%;
+  display: inline-block;
+  flex-direction: column;
+  padding: 10rpx 40rpx 0rpx 0rpx;
+  text-align: right;
+	vertical-align:top;
+}
+.commodity_prise text{
+  font-size: 30rpx;
+	display: block;
+}
+.commodity_prise text:last-child{
+  font-size: 28rpx;
+  color: #9e9e9e;
+  margin-top: 15rpx
+}
+
+.gray{
+	color:#9e9e9e;
+}
+
+/* 订单选中框 */
+.checked{
+	width:10%;
+	display: inline-block;
+	text-align: center;
+}
+
+/* 复选框按钮 */
+checkbox  .wx-checkbox-input{
+	border-radius:50%;
+	font-weight:bold;
+	border:2px solid #9e9e9e;
+	box-sizing:border-box;
+}
+
+/* 选中样式 */
+checkbox  .wx-checkbox-input.wx-checkbox-input-checked{
+	border:3px solid #FF4081;
+}
+
+/* 删除订单 */
+.delete{
+	text-align: right;
+	line-height:80rpx;
+	padding-right:20rpx;
+}
+
+/* 删除按钮 */
+.delete text{
+	border:1px solid #9e9e9e;
+	border-radius:4px;
+	padding:6rpx 20rpx;
+	font-size:14px;
+}
+
+/* 选中订单合计 */
+.checkedTotal{
+	position: fixed;
+	bottom:0;
+	line-height:35px;
+	border-top:1px solid #9e9e9e;
+	font-size:14px;
+	padding-left:10rpx;
+	background:#fff;
+	color:#9e9e9e;
+}
+
+.checkedTotal text{
+	display:inline-block;
+}
+
+/* 结算按钮 */
+.close{
+	width:20%;
+	box-sizing:border-box;
+	line-height:33px;
+	border:1px solid #9e9e9e;
+	text-align: center;
+	background: #E51C23;
+	color:#fff;
+}
+
+/* 全选按钮区 */
+.checkAll{
+	display: inline-block;
+	width:20%;
+}
+
+.checkAll text{
+	margin-left:10rpx;
+}
+
+/* 金额合计区 */
+.moneytotal{
+	display: inline-block;
+	width:60%;
+	text-align: center;
+}
+
+.moneytotal text{
+	margin:0 6rpx;
+}
+
+/* 合计文本颜色 */
+.moneytotal text:first-child{
+	color:#000;
+}
+
+/* 合计金额颜色 */
+.moneycolor{
+	color:#F5053D;
+}

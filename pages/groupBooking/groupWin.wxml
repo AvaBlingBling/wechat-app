@@ -1,0 +1,96 @@
+<view class="container">
+<!-- banner -->
+	<view class="banner">
+		<view class="left"><image src="{{img}}" mode="widthFix"></image></view>
+		<view class="right">
+			<view class="bold">有机食物大集合 | 健康过冬</view>
+			<view class="moods">超人气 精选 营养</view>
+			<view class="used_price"><text class="bold">￥</text> {{newPrice}}</view>
+			<view class="province_red"><text class="bold">￥{{groupPrice}}</text><text class="province">2人开团立省34元</text></view>
+		</view>
+	</view>
+
+	<!-- 开团信息 -->
+	<view class="group_detail">
+		<view class="bad_man">开团成功,还差<text class="text_red">{{personNum}}</text>人成功</view>
+		<view class="only_leave">仅剩 
+			<text class="count_down">05</text> :
+			<text class="count_down">43</text> :
+			<text class="count_down">25</text> 失效
+		</view>
+		<view class="colonel">团长 <view><image src="{{colonelHead}}"></image></view></view>
+		<view class="invite" bindtap='InviteFriends'>
+			<text>邀请朋友</text>
+			<image src="../../images/iconfont-tuihuo.png"></image>
+		</view>
+	</view>
+
+	<!-- 拼团规则 -->
+	<view class="group_details">
+		<view class="group_rule">
+			<!-- 拼团规则 -->
+				<view>
+					<view>
+						<text class="rule_title">拼团规则</text>
+						<text class="rule_detail" bindtap='show'>详细规则 ></text>
+					</view>
+					<view class="step">
+						<text class="circle">1</text>
+						<text class="striping"></text>
+						<text class="circle">2</text>
+						<text class="striping"></text>
+						<text class="circle">3</text>
+					</view>
+					<view class="step_details">
+						<view class="step_one">
+							<view>开团/参团</view>
+							<view>完成支付</view>
+						</view>
+						<view class="step_two">
+							<view>分享拼团给好友</view>
+							<view>邀请参团</view>
+						</view>
+						<view class="step_three">
+							<view>规定的拼团时间内达到拼团人数即拼团成功</view>
+							<view>人数不足自动退款</view>
+						</view>
+					</view>
+				</view>
+
+        <!-- 商品详情 标题-->
+				<view class="product_details">商品详情</view>
+        <!-- 商品详情 详细介绍 -->
+				<view>
+					<div>这里是商品介绍,包括商品详细信息,产品规格,品牌介绍,商品图片,视频等等</div>
+					<div><image src="../../images/4.jpg"></image></div>
+				</view>
+			</view>
+	</view>
+
+	<!--客服会话  -->
+  <button bindcontact="contacttap" class="contact-button" open-type="contact" session-from="weapp">
+    <image class="cs_image" mode="aspectFit" src="../../images/tab3.png"></image>    
+  </button>
+
+	<!-- 拼团规则弹窗 -->
+	<view class="shade" wx:if="{{shadeshow}}">
+		<view class="pop_up">
+			<icon type="clear" class="clear" bindtap='hide'></icon>
+			<view class="pop_title">
+				拼团详细规则
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">1.开团</text><text> : 在拼团活动期间,进入拼团商品页面,点击开团,下单完成支付后视为开团成功,并成为该团团长;</text>
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">2.参团</text><text> : 进入他人团详情页面,点击参团,下单完成支付后视为参团成功;</text>
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">3.优惠券使用</text><text> : 除拼团专用权外,购买拼团商品一般不可使用优惠券;</text>
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">4.拼团成功</text><text> : 在拼团有效期内完成支付的用户达到拼团人数,则拼团成功;</text>
+			</view>
+		</view>
+	</view>
+</view>

@@ -14,6 +14,7 @@ function md(obj) {
 }
 
 const postService = (option,data, callback) => {
+  console.log(data);
   const date = new Date().getTime()
   const AppKey = 'menya.mall'
   const client_id = 'wx.mall'
@@ -34,7 +35,9 @@ const postService = (option,data, callback) => {
   wx.request({
     url: option.url,
     data: data,
+    method:"POST",
     header: {
+      'content-type': 'application/x-www-form-urlencoded',
       'Accept': 'application/json',
       'AppKey': AppKey,
       'Rest-Auth': 'account=' + option.account + ',client_id=' + client_id + ',timestamp=' + date + ',signature=' + signature

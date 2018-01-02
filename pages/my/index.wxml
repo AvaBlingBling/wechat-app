@@ -6,8 +6,14 @@
   </view>
   <view class='info-list'>
     <view class='info-details'>
+      <text>我的订单</text>
+      <navigator url='../order/index'>
+        <image src='/images/my/next.png' mode="widthFix" />
+      </navigator>
+    </view>
+    <view class='info-details'>
       <text>我的优惠卷</text>
-      <navigator url=''>
+      <navigator url='../order/index'>
         <image src='/images/my/next.png' mode="widthFix" />
       </navigator>
     </view>

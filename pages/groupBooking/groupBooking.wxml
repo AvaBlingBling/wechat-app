@@ -1,0 +1,149 @@
+<!-- <import src="template.wxml"/> -->
+
+<view class="container">
+<!-- 轮播图 -->
+	<view class="group_banner">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{cirular}}" class="swiper">
+			<block wx:for="{{imgUrls}}" wx:key="{{item.id}}">
+				<swiper-item>
+					<image src="{{item.src}}" mode="widthFix"></image>
+				</swiper-item>	
+			</block>
+		</swiper>
+		<!-- 倒计时 -->
+		<view class="past_due">
+			<view class="left">
+				<text class="rmb">￥</text><text class="money">{{pcontent.groupPrice}}</text>
+				<text class="province">2人开团立省34元</text>
+			</view>
+			<view class="right">
+				<text>距活动结束 :  </text>
+				<text class="count_down">05</text>:
+				<text class="count_down">43</text>:
+				<text class="count_down">25</text>
+			</view>
+		</view>
+	</view>
+
+	<!-- 拼团规则 商品详情-->
+	<view class="group_details">
+		<view class="share">
+      <!-- 超人气 -->
+      <view>
+        <view class="share_left">
+          <view class="bold">{{pcontent.title}}</view>
+          <view>{{pcontent.subtitle}}</view>
+          <text class="new_price">￥ {{pcontent.newPrice}}</text>
+          <text class="used_price">{{pcontent.usedPrice}}</text>
+        </view>
+        <view class="share_right">
+          <image src="../../images/iconfont-tuihuo.png"></image>
+          <view>分享</view>
+          <view class="freight">运费 : {{pcontent.carriage >0 ? pcontent.carriage : "免运费"}}</view>
+        </view>
+      </view>
+
+			<!-- 详情和规则 -->
+			<view class="group_rule">
+			<!-- 拼团规则 -->
+				<view>
+					<view>
+						<text class="rule_title">拼团规则</text>
+						<text class="rule_detail" bindtap='show'>详细规则 ></text>
+					</view>
+					<view class="step">
+						<text class="circle">1</text>
+						<text class="striping"></text>
+						<text class="circle">2</text>
+						<text class="striping"></text>
+						<text class="circle">3</text>
+					</view>
+					<view class="step_details">
+						<view class="step_one">
+							<view>开团/参团</view>
+							<view>完成支付</view>
+						</view>
+						<view class="step_two">
+							<view>分享拼团给好友</view>
+							<view>邀请参团</view>
+						</view>
+						<view class="step_three">
+							<view>规定的拼团时间内达到拼团人数即拼团成功</view>
+							<view>人数不足自动退款</view>
+						</view>
+					</view>
+				</view>
+
+        <!-- 商品详情 标题-->
+				<view class="product_details">商品详情</view>
+        <!-- 商品详情 详细介绍 -->
+				<view>
+					<div>{{productDetails.describe}}</div>
+					<div><image src="{{productDetails.imgsrc}}"></image></div>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- 底部购物车 -->
+	<view class="footer">
+		<ul>
+			<li class="home_page">
+				<navigator url="../home/home" open-type='switchTab'>
+					<div><image src="../../images/iconfont-dingdan.png"></image></div>
+					<div>首页</div>
+				</navigator>
+			</li>
+			<li class="shopping_cart">
+				<div><image src="../../images/footer-icon-03.png"></image></div>
+				<div bindtap="shoppingCart">购物车</div>
+			</li>
+			<li class="alone" bindtap="showbuy">
+				<div>
+					<text class="bold">￥</text>
+					<text>{{pcontent.newPrice}}</text>
+				</div>
+				<div>单独购买</div>
+			</li>
+			<li class="open_group">
+				<navigator url="groupWin" open-type='navigate'>
+					<div class="left_price">
+						<div><text class="bold">￥</text> {{pcontent.groupPrice}}</div>
+						<div>2人团</div>
+					</div>
+					<div class="right_txt">开团</div>
+				</navigator>
+			</li>
+		</ul>
+	</view>
+
+	<!--客服会话  -->
+  <button bindcontact="contacttap" class="contact-button" open-type="contact" session-from="weapp">
+    <image class="cs_image" mode="aspectFit" src="../../images/tab3.png"></image>    
+  </button>
+
+	<!-- 拼团规则弹窗 -->
+	<view class="shade" wx:if="{{shadeshow}}">
+		<view class="pop_up">
+			<icon type="clear" class="clear" bindtap='hide'></icon>
+			<view class="pop_title">
+				拼团详细规则
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">1.开团</text><text> : 在拼团活动期间,进入拼团商品页面,点击开团,下单完成支付后视为开团成功,并成为该团团长;</text>
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">2.参团</text><text> : 进入他人团详情页面,点击参团,下单完成支付后视为参团成功;</text>
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">3.优惠券使用</text><text> : 除拼团专用权外,购买拼团商品一般不可使用优惠券;</text>
+			</view>
+			<view class="pop_detail">
+				<text class="title_bold">4.拼团成功</text><text> : 在拼团有效期内完成支付的用户达到拼团人数,则拼团成功;</text>
+			</view>
+		</view>
+	</view>
+
+  <!-- <template is="buyproduct"></template> -->
+  <include src="template.wxml"/>
+</view>

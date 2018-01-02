@@ -19,9 +19,9 @@ Page({
   },
   //新建地址
   addAddress: function(){
-    // wx.navigateTo({
-    //   url: './addAddress',
-    // })
+     wx.navigateTo({
+       url: './addAddress',
+     })
     const that = this;
     wx.chooseAddress({
       success: function (res) {
@@ -32,9 +32,10 @@ Page({
           city: res.cityName,
           zone: res.countyName,
           address: res.detailInfo,
-          number: res.postalCode
+          number: res.postalCode,
         }
         that.setData({address})
+        
       }
     })
   },

@@ -1,0 +1,351 @@
+@import "template.wxss";
+
+.container{
+	padding-bottom:50px;
+	position:relative;
+}
+
+/* 轮播高度 */
+.swiper{
+  height:600rpx;
+}
+
+/* 活动倒计时 */
+.past_due{
+	padding:12rpx;
+	background:#5E3745;
+	color:#fff;
+	font-size:12px;
+}
+
+/* 左边红色区 */
+.left{
+	width:50%;
+	display: inline-block;
+}
+
+/* ￥ newprice*/
+.past_due .rmb{
+	font-size:20px;
+	vertical-align:middle;
+	font-weight:bold;
+}
+
+/* 金额 */
+.past_due .money{
+	margin:0 16rpx;
+	vertical-align: middle;
+}
+
+/* 红色区 */
+.province{
+	padding:6rpx 10rpx;
+	background:#E51C23;
+	vertical-align: middle;
+}
+
+/* 右边倒计时区 */
+.right{
+	width:50%;
+	display: inline-block;
+	text-align: right;
+  margin-top:4rpx;
+}
+
+/* 倒计数字时背景 */
+.past_due .count_down{
+	display: inline-block;
+	padding:6rpx 6rpx;
+	background:#fff;
+	color:#000;
+	margin-right:6rpx;
+}
+
+/* 拼团规则和商品详情 */
+.group_details{
+	padding:0 12rpx;
+}
+
+
+.group_details .share{
+	margin-top:6px;
+	font-size:14px;
+	color:#2B2A2B;
+}
+
+/* 超人气 */
+.share_left{
+	width:70%;
+	display:inline-block;
+	vertical-align: top;
+}
+
+/* 健康过冬 */
+.share_left .bold{
+	font-size:18px;
+	font-weight: bold;
+	color:#000;
+}
+
+/* 折后单价 */
+.share_left .new_price{
+	color:#E51C23;
+	margin-right:4px;
+	font-weight:bold;
+	font-size:18px;
+}
+
+/* 原价 */
+.share_left .used_price{
+	display: inline-block;
+	width:80rpx;
+	text-align: right;
+	font-size:16px;
+	text-decoration: line-through;
+}
+
+/* 右边运费 */
+.share_right{
+	width:30%;
+	display: inline-block;
+	text-align: right;
+}
+
+/* 分享图标 */
+.share_right image{
+	width:60rpx;
+	height:60rpx;
+	vertical-align: middle;
+}
+
+/* 免运费 */
+.share_right .freight{
+	color:#9E9E9E;
+}
+
+
+/* 拼团规则 */
+.group_rule{
+	border:1px solid #9E9E9E;
+	text-align: center;
+	padding-top:10rpx;
+}
+
+.rule_title{
+  display: inline-block;
+  width:calc(100% - 6em);
+  padding-left:6em;
+  box-sizing:border-box;
+}
+
+/* 规则详情 */
+.rule_detail{
+  color:#9E9E9E;
+  display: inline-block;
+  width:6em;
+}
+
+/* 123步骤 */
+.group_rule .step{
+	margin:15px 0 10px 0;
+}
+
+/* 圆 */
+.group_rule .circle{
+	display: inline-block;
+	width: 60rpx;
+	height:60rpx;
+	line-height:60rpx;
+	border:1px solid #9E9E9E;
+	border-radius:50%;
+}
+
+/* 元之间横线 */
+.group_rule .striping{
+	display: inline-block;
+	border-top:1px solid #9E9E9E;
+	width:210rpx;
+	vertical-align: middle;
+}
+
+/* 商品详情标题 */
+.group_rule .product_details{
+	border:1px solid #9E9E9E;
+	height:60rpx;
+	line-height:60rpx;
+	border-left:0;
+	border-right:0;
+}
+
+/* 步骤详情 */
+.step_details{
+	text-decoration: none;
+}
+
+.step_one,.step_two,.step_three{
+  display: inline-block;
+	vertical-align: top;
+}
+
+.step_one{
+  width:22%;
+}
+
+.step_two{
+  width:32%;
+}
+
+.step_three{
+  width:40%;
+}
+
+/* 购物车 */
+.footer{
+	position: fixed;
+	bottom:0;
+	height:50px;
+	line-height:50px;
+	font-size:16px;
+	border-top:1px solid #9E9E9E;
+}
+
+.footer li{
+	float:left;
+	text-align: center;
+	background: #fff;
+	box-sizing:border-box;
+	font-size:12px;
+}
+
+/* 首页 购物车宽度*/
+.home_page,.shopping_cart{
+	width:17%;
+	border-right:1px solid #9E9E9E;
+}
+
+/* 单独购买宽度 */
+.footer .alone{
+	width:25%;
+	background:#8A6673;
+	border-right:1px solid #fff;
+	color:#fff;
+}
+
+/* 开团宽度 */
+.footer .open_group{
+	width:41%;
+	text-align: center;
+	background:#E51C23;
+	color:#fff;
+	background:#E51C23;
+	font-size:14px;
+}
+
+/* 首页购物车图标 */
+.footer li image{
+	width:40rpx;
+	height:40rpx;
+	vertical-align: middle;
+}
+
+/* li下的div */
+.footer li div{
+	display: block;
+	width:100%;
+	height:25px;
+	line-height:25px;
+}
+
+/* ￥加粗 */
+.footer .bold{
+	font-size:16px;
+	font-weight:bold;
+}
+
+/* 开团左边金额 */
+.footer .left_price{
+	display: inline-block;
+	width:55%;
+	text-align: right;
+}
+
+/* 开团右边文字 */
+.footer .right_txt{
+	text-align: left;
+	display: inline-block;
+	width:40%;
+	height:50px;
+	line-height:50px;
+	margin-left:5%;
+	vertical-align: top;
+	font-size:18px;
+	font-weight:bold;
+}
+
+/* 客服 */
+contact-button,.contact-button{
+  background-color: transparent; 
+  border: 0px;
+  width: 90rpx;
+  height: 90rpx;  
+  position: fixed;
+  bottom: 140rpx;
+  right: 40rpx;
+   padding: 0;  
+  font-size: 0.6rem;
+	z-index:99;
+}
+.contact-button:after {
+   border: 0px; 
+}
+contact-button .cs_image,
+.contact-button .cs_image{
+  width: 90rpx;
+  height: 90rpx;
+}
+
+/* 拼团规则弹窗 */
+/* 遮罩层 */
+.shade{
+	position:absolute;
+	top:0;
+	left:0;
+	background:rgba(68,68,68,.4);
+	height:100%;
+}
+
+/* 弹窗 */
+.pop_up{
+	position:fixed;
+	top:15%;
+	left:50%;
+	margin-left:-250rpx;
+	border-radius:6px;
+	padding:10px;
+	background:#fff;
+	width:500rpx;
+	font-size:12px;
+}
+
+/* 关闭按钮 */
+.clear{
+	position:absolute;
+	right:10rpx;
+	top:10rpx;
+}
+
+/* 开头加粗 */
+.title_bold{
+	font-weight:bold;
+}
+
+/* 规则标题 */
+.pop_title{
+	margin:10rpx 0 -20rpx 0;
+	text-align: center;
+}
+
+/* 规则详情 */
+.pop_detail{
+	margin:60rpx 0;
+}
