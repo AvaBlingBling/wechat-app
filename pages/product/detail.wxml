@@ -28,12 +28,12 @@
     </view>
     <view class="controls">
       <div class="firstpage"><navigator url="../home/home" open-type="switchTab">首页</navigator></div>
-      <div class="orders">订单</div>
-      <div class="joinorders" bindtap="joinOrders">加入订单</div>
+      <div class="orders"><navigator url='../shoppingCart/shoppingCart' hover-class="navigator-hover">购物车</navigator></div>
+      <div class="joinorders" bindtap="joinOrders">加入购物车</div>
       <div class="bugnow">立即购买</div>
     </view>
   </view> 
-  <view bindtap="clear" class="{{showOrderPage? 'mask':'hidden'}}"></view>
+  <view bindtap="clear" class="{{showOrderPage? 'mask':'hidden'}}"></view>  
   <view class="{{showOrderPage? 'orderPage':'hidden'}}">
     <icon type="clear" size="20" class="page-clear" bindtap="clear"/>
     <view class="orderPage-container">

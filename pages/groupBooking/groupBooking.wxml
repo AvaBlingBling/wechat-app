@@ -95,8 +95,10 @@
 				</navigator>
 			</li>
 			<li class="shopping_cart">
-				<div><image src="../../images/footer-icon-03.png"></image></div>
-				<div bindtap="shoppingCart">购物车</div>
+				<navigator url="../shoppingCart/shoppingCart" open-type='switchTab'>
+					<div><image src="../../images/footer-icon-03.png"></image></div>
+					<div bindtap="shoppingCart">购物车</div>
+				</navigator>
 			</li>
 			<li class="alone" bindtap="showbuy">
 				<div>

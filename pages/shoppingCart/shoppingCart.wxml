@@ -1,85 +1,50 @@
 <view class='container'>  
-<view style="display:{{curIndex=='0' ? 'block':'none' }}">
-  <view class='content' wx:for="{{products}}" wx:key="index" >
+	<view wx:if="{{hasList}}">
+		<view class='content' wx:for="{{products}}" wx:key="index" >
 
-   <view class='usermotto' bindtap="toast" >
-	 
-	 		<view class="checked">
-				 <checkbox-group bindchange="checkboxChange">
-					<label class="checkbox">
-						<checkbox color="#FF4081" class="ws-chenckbox" value="{{item.prise}}" checked="{{item.check}}"></checkbox>
-					</label>
-				</checkbox-group>  
-			</view>
-      <view class='commodity'>
-          <view class='commodity_pic'>
-            <image src="{{item.imgurls}}"></image>
-          </view>
-          <view class='commodity_name'>
-            <text>{{item.text}}</text>
-            <text class="gray">{{item.weight}}</text>
-          </view>
-          <view class='commodity_prise'>
-            <text>￥{{item.prise}}</text>
-            <text>× {{item.amount}}</text>
-          </view>
-      </view>
-   </view>
-	 <view class="delete"><text bindtap="modalcnt">删除</text></view>
-  </view>
- </view>
-
- <view style="display:{{curIndex=='1' ? 'block':'none' }}">
-
-    <view class='content'wx:for="{{products}}" >
-    <view class='commodity'>
-      <view class='commodity_pic'>
-        <image src="{{item.imgurls}}"></image>
-      </view>
-      <view class='commodity_name'>
-        <text>{{item.text}}</text>
-        <text>{{item.weight}}</text>
-      </view>
-      <view class='commodity_prise'>
-        <text>￥{{item.prise}}</text>
-        <text>× {{item.amount}}</text>
-      </view>
-    </view>
-  </view>
-</view>
-
- <view style="display:{{curIndex=='2' ? 'block':'none' }}">
-    <view class='content'wx:for="{{products}}"wx:key="index" >
-
-   <view class='usermotto' bindtap="toast" >
-       <view class='commodity'>
-          <view class='commodity_pic'>
-            <image src="{{item.imgurls}}"></image>
-          </view>
-          <view class='commodity_name'>
+			<view class='usermotto'>
+		
+				<view class="checked">
+					<!-- <checkbox-group bindchange="checkboxChange">
+						<label class="checkbox">
+							<checkbox color="#FF4081" data-price="{{item.prise}}" value="{{item.prise}}" checked="{{item.check}}"></checkbox> 
+						</label>
+					</checkbox-group>    -->
+					<icon wx:if="{{item.selected}}" type="success" color="#FF4081" data-index="{{index}}"  class="icon" bindtap="selectList"/>
+          <icon wx:else type="circle" class="icon" data-index="{{index}}" bindtap="selectList"/>
+				</view>
+				<view class='commodity'>
+					<view class='commodity_pic'>
+						<image src="{{item.imgurls}}"></image>
+					</view>
+					<view class='commodity_name'>
 						<text>{{item.text}}</text>
-						<text>{{item.weight}}</text>            
-          </view>
-          <view class='commodity_prise'>
-            <text>￥{{item.prise}}</text>
-            <text>× {{item.amount}}</text>
-          </view>
-      </view>
-   </view>
-  </view>
- </view>
- <view style="display:{{curIndex=='3' ? 'block':'none' }}">3</view>
+						<text class="gray">{{item.weight}}</text>
+					</view>
+					<view class='commodity_prise'>
+						<text>￥{{item.prise}}</text>
+						<text>× {{item.amount}}</text>
+					</view>
+					</view> 
+				</view>	
+				<view class="delete"><text bindtap="modalcnt" data-index="{{item.index}}">删除</text></view>
+			</view>
+		</view>
+	<view wx:else class="empty">购物车是空的哦~~</view>
+ 
 
- <view class="checkedTotal">
-	<view class="checkAll">
-		<checkbox color="#FF4081" bindtap="change"></checkbox>
-		<text>全选</text>
+	<view class="checkedTotal">
+		<view class="checkAll">
+			<!-- <checkbox color="#FF4081" bindtap="change"></checkbox>  -->
+			<icon wx:if="{{selectAllStatus}}" type="success" color="#FF4081" class="total-select" bindtap="selectAll"/>
+      <icon wx:else type="circle" color="#9e9e9e" class="total-select" bindtap="selectAll"/>
+			<text>全选</text>
+		</view>
+		<view class="moneytotal">
+			<text>合计 : </text>
+			<text class="moneycolor">￥ {{closetotal}}</text>
+			<text>{{freight>0?"含运费" : "不含运费"}}</text>
+		</view>
+		<text class="close">结算</text>
 	</view>
-	<view class="moneytotal">
-		<text>合计 : </text>
-		<text class="moneycolor">￥ {{closetotal}}</text>
-		<text>{{freight>0?"含运费" : "不含运费"}}</text>
-	</view>
-	<text class="close">结算</text>
- </view>
 </view> 

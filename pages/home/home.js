@@ -79,12 +79,21 @@ Page({
       '../../images/2.jpg',
       '../../images/3.jpg'
     ],
-    newArrival:{
-      pic1: '../../images/1.jpg',
-      pic2: '../../images/2.jpg',
-      pic3: '../../images/3.jpg',
-      pic4:'../../images/4.jpg'
-    },
+    newArrival:[{
+        pic: '../../images/1.jpg',
+        text:'新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+        seil:'低调，奢华，有内涵',
+        prise:"888",
+        initial:'1888',
+    },{
+        pic: '../../images/1.jpg',
+        text: '新款施华洛世奇恶新款施华洛世奇恶魔之眼手环',
+        seil: '低调，奢华，有内涵',
+        prise: "888",
+        initial: '1888',
+    }
+    
+    ],
     curIndex: '0',//记录tab当前页
     products: [{
       id:1,

@@ -77,14 +77,14 @@
         <image class="section__ctn_img_vertical" mode="aspectFill" src="{{newArrival.pic4}}"></image>
       </view>
     </view> -->
-    <view class='section_ctn'>
+    <view class='section_ctn' wx:for="{{newArrival}}" wx:key="{{index}}">
       <view class='section_ctn_l'>
-        <image  mode='aspectFit' src='{{newArrival.pic1}}'/>
+        <image  mode='aspectFit' src='{{item.pic}}'/>
       </view>
       <view class='section_ctn_r'>
-        <text class='section_ctn_name'>111</text>
-        <text class='section_ctn_sell'>2222</text>
-        <view class='section_ctn_mask'><text>￥</text><text class='prise'>455</text><text class='initial'>1234</text></view>  
+        <text class='section_ctn_name'>{{item.text}}</text>
+        <text class='section_ctn_sell'>{{item.seil}}</text>
+        <view class='section_ctn_mask'><text class='section_ctn_mask_1'>￥</text><text class='prise'>{{item.prise}}</text><text class='initial'>{{item.initial}}</text></view> 
       </view>
     </view>
 
