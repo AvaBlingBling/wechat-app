@@ -84,20 +84,16 @@ Page({
               prod.push(product);
             }
           }
-					// products.splice(index,1);//删除当前数据
-					self.setData({//重新设置购物车列表
-            products: prod
-					});
-					// let slectAll = true;//查询所有商品是否全部选中
-					// for (let i = 0; i < products.length; i++) {
-					// 	if (!products[i].selected) {
-					// 		slectAll = products[i].selected;
-					// 	}
-					// };
-					// self.setData({//设置全选按钮
-					// 	selectAllStatus: slectAll
-					// });
-					self.toast();//重新计算总价
+          let closetotal = 0;
+          for (let i = 0; i < prod.length; i++) {
+            if (prod[i].selected) {
+              closetotal += prod[i].prise * prod[i].amount;
+            }
+          }
+          self.setData({//重新设置购物车列表数据
+            products: prod,
+            closetotal: closetotal.toFixed(2)
+          })
 				} else if (res.cancel) {
 					console.log('用户点击取消')
 				}
