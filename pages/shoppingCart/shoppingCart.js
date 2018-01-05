@@ -79,15 +79,13 @@ Page({
 				if (res.confirm) {
 					console.log(index);
           let prod = [];
+          let closetotal = 0;
           for(let product of products){
             if (product.index !== index){
               prod.push(product);
             }
-          }
-          let closetotal = 0;
-          for (let i = 0; i < prod.length; i++) {
-            if (prod[i].selected) {
-              closetotal += prod[i].prise * prod[i].amount;
+            if (product.selected) {
+              closetotal += product.prise * product.amount;
             }
           }
           self.setData({//重新设置购物车列表数据
