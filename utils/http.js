@@ -39,7 +39,7 @@ const postService = (option,data, callback) => {
     header: {
       'content-type': 'application/x-www-form-urlencoded',
       'Accept': 'application/json',
-      'AppKey': AppKey,
+      // 'AppKey': AppKey,
       'Rest-Auth': 'account=' + option.account + ',client_id=' + client_id + ',timestamp=' + date + ',signature=' + signature
     },
     success: (res) => {

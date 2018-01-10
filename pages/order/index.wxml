@@ -48,7 +48,7 @@
  </view>
  <view style="display:{{curIndex=='1' ? 'block':'none' }}">
 
-    <view class='content'wx:for="{{products}}" >
+    <view class='content'wx:for="{{products}}" wx:key="{{index}}">
     <view class='number'>
         <text>编号：{{item.numbers}}</text>
         <text>{{item.state}}</text>
@@ -120,5 +120,4 @@
   </view>
  </view>
  <view style="display:{{curIndex=='3' ? 'block':'none' }}">3</view>
-</view> 
-
+</view>                   

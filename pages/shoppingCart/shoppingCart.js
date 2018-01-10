@@ -1,5 +1,5 @@
 const app = getApp()
-Page({
+Page({  
 
   /**
    * 页面的初始数据
@@ -83,10 +83,11 @@ Page({
           for(let product of products){
             if (product.index !== index){
               prod.push(product);
+              if (product.selected) {
+                closetotal += product.prise * product.amount;
+              }
             }
-            if (product.selected) {
-              closetotal += product.prise * product.amount;
-            }
+            
           }
           self.setData({//重新设置购物车列表数据
             products: prod,
@@ -97,7 +98,7 @@ Page({
 				}
 			}
 		});
-		if(products.length <= 1){//如果当前购物车没有数据
+		if(products.length <1){//如果当前购物车没有数据
 			self.setData({//显示空页面
 				hasList:false
 			})
@@ -135,6 +136,7 @@ Page({
 			products[i].selected = selectAllStatus;
 		}
 		this.setData({
+      
 			products:products,
 			selectAllStatus: selectAllStatus
 		});

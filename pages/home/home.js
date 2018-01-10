@@ -7,6 +7,7 @@ const app = getApp()
 
 Page({
   data: {
+    token:"",
     coupon: [{
       receive:true,
       discount:50,
@@ -140,6 +141,7 @@ Page({
     //获取每日上新的图片
     //获取轮播图的图片
     app.getUserInfo((data)=>{
+      const that = this
       wx.login({
         success: function (res) {
           if (res.code) {
@@ -149,15 +151,22 @@ Page({
               nickName: data.nickName,
               province: data.province,
               city: data.city,
-              gender: data.gender
+              gender: data.gender,
             }
+            console.log(res.code.token)
             http.postService({
-              url: 'http://192.168.0.46:8080/1.0/register',
+              url: 'http://192.168.0.88:8088/1.0/register',
               account: '123456789',
               api_method: '1.0/register',
             }, postData, (data) => {
-              console.log(data);
+              
+              console.log(data)
+             
+            
             });
+           
+          
+            
 
           } else {
             console.log('获取用户登录态失败！' + res.errMsg)
@@ -165,7 +174,18 @@ Page({
         }
       });
       
-    })
+    });
+      http.getService({
+        url:'http://192.168.0.88:8088/1.0/goodsClass',
+        account:'123456789',
+        api_method:'1.0/goodsClass',
+      },data=>{
+  
+        console.log(data)
+      
+      })  
+
+
     
   },
   onShareAppMessage: function (res) {
